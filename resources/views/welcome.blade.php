@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    itjz-stu
                 </div>
 
                 <div class="links">
