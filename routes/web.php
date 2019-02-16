@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::any('{all}', function () {
+    return view('layouts.master');
+})->where(['all' => '.*']);
 
 Route::post('/deploy','DeploymentController@deploy');
