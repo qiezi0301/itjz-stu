@@ -1,11 +1,17 @@
 <template>
     <footer class="text-muted">
         <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-            <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+            <div class="footer-bottom">
+                <p class="pull-left not-mobile not-pad">
+                Developed By
+                    <a href="https://jellybool.com" target="_blank" rel="noreferrer noopener">JellyBool</a>,Powered
+                By
+                    <a target="_blank" rel="noreferrer noopener" href="http://laravel.com">Laravel</a>
+                </p>
+                <div class="pull-right not-mobile not-pad">© CODECASTS 2019. All rights reserved.
+                    <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="noreferrer noopener" style="font-weight: normal;">蜀ICP备17021114号</a>
+                </div>
+            </div>
         </div>
     </footer>
 </template>

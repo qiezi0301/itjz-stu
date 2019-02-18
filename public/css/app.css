@@ -10966,8 +10966,50 @@ header#header nav ul li:last-of-type a {
   color: #222;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  font-size: 1.1em;
+}
+
+.footer-bottom,
+.footer__connect {
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  padding-top: 40px;
+  color: #111;
+}
+
+#footer .footer-bottom a {
+  color: #111;
+  font-weight: 700;
+}
+
+#footer a {
+  color: #8e8e8e;
+}
+
+#footer a:hover {
+  color: inherit;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+a {
+  cursor: pointer;
+  color: #15b982;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 

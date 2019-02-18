@@ -1812,6 +1812,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Footer"
 });
@@ -37075,26 +37081,49 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("footer", { staticClass: "text-muted" }, [
       _c("div", { staticClass: "container" }, [
-        _c("p", { staticClass: "float-right" }, [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Back to top")])
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Album example is © Bootstrap, but please download and customize it for yourself!"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v("New to Bootstrap? "),
-          _c("a", { attrs: { href: "../../" } }, [
-            _vm._v("Visit the homepage")
+        _c("div", { staticClass: "footer-bottom" }, [
+          _c("p", { staticClass: "pull-left not-mobile not-pad" }, [
+            _vm._v("\n            Developed By\n                "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://jellybool.com",
+                  target: "_blank",
+                  rel: "noreferrer noopener"
+                }
+              },
+              [_vm._v("JellyBool")]
+            ),
+            _vm._v(",Powered\n            By\n                "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  target: "_blank",
+                  rel: "noreferrer noopener",
+                  href: "http://laravel.com"
+                }
+              },
+              [_vm._v("Laravel")]
+            )
           ]),
-          _vm._v(" or read our "),
-          _c("a", { attrs: { href: "../../getting-started/" } }, [
-            _vm._v("getting started guide")
-          ]),
-          _vm._v(".")
+          _vm._v(" "),
+          _c("div", { staticClass: "pull-right not-mobile not-pad" }, [
+            _vm._v("© CODECASTS 2019. All rights reserved.\n                "),
+            _c(
+              "a",
+              {
+                staticStyle: { "font-weight": "normal" },
+                attrs: {
+                  href: "http://www.miitbeian.gov.cn/",
+                  target: "_blank",
+                  rel: "noreferrer noopener"
+                }
+              },
+              [_vm._v("蜀ICP备17021114号")]
+            )
+          ])
         ])
       ])
     ])
