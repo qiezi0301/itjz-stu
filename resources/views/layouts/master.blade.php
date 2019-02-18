@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 </head>
 <body>
-    <div id="app">
-        <router-view></router-view>
+    <div id="application">
+        <app></app>
     </div>
     <script src="{{asset('/js/app.js')}}"></script>
 </body>

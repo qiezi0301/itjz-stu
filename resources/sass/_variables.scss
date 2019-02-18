@@ -2,10 +2,23 @@
 // Body
 $body-bg: #f8fafc;
 
+body,html {
+  height: 100%
+}
+
+body {
+  color: #555;
+  font-family: Maven Pro,Microsoft YaHei,sans-serif!important;
+}
+
+::-webkit-scrollbar {
+  display: none
+}
+
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+//$font-family-sans-serif: "Nunito", sans-serif;
+//$font-size-base: 0.9rem;
+//$line-height-base: 1.5;
 
 // Colors
 $blue: #3490dc;
