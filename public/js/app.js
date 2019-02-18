@@ -37093,7 +37093,7 @@ var staticRenderFns = [
                   rel: "noreferrer noopener"
                 }
               },
-              [_vm._v("JellyBool")]
+              [_vm._v("Qiezi")]
             ),
             _vm._v(",Powered\n            By\n                "),
             _c(
@@ -37110,7 +37110,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "pull-right not-mobile not-pad" }, [
-            _vm._v("© CODECASTS 2019. All rights reserved.\n                "),
+            _vm._v("© ITJZ-STU 2019. All rights reserved.\n                "),
             _c(
               "a",
               {
@@ -37121,7 +37121,7 @@ var staticRenderFns = [
                   rel: "noreferrer noopener"
                 }
               },
-              [_vm._v("蜀ICP备17021114号")]
+              [_vm._v("鄂ICP备18029488号")]
             )
           ])
         ])
