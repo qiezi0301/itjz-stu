@@ -1,0 +1,30 @@
+.grid .card a {
+  color: #15b982;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.grid .card h2>a {
+  color: #111;
+  margin-top: 0;
+  font-size: 24px;
+}
+
+a:hover {
+  text-decoration: underline
+}
+.page,.sidebar-nav {
+  -webkit-transition: margin .3s;
+  transition: margin .3s;
+}
+.page,main {
+  background: #f5f5f1
+}
+
+.page {
+  min-height: 100%;
+  height: auto!important;
+  height: 100%;
+  margin-bottom: -100px
+}
+

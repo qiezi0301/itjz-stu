@@ -1958,6 +1958,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/api/series').then(function (response) {
+      _this.series = response.data.data;
+    });
+  },
+  data: function data() {
+    return {
+      series: []
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Serie.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/Serie.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1981,8 +2048,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Serie",
   mounted: function mounted() {
-    console.log('Component mounted.');
+    var _this = this;
+
+    axios.get('/api/series/' + this.$route.params.id).then(function (response) {
+      _this.serie = response.data;
+    });
+  },
+  data: function data() {
+    return {
+      serie: {}
+    };
   }
 });
 
@@ -37079,54 +37156,58 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "text-muted" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "footer-bottom" }, [
-          _c("p", { staticClass: "pull-left not-mobile not-pad" }, [
-            _vm._v("\n            Developed By\n                "),
-            _c(
-              "a",
-              {
-                attrs: {
-                  href: "https://jellybool.com",
-                  target: "_blank",
-                  rel: "noreferrer noopener"
-                }
-              },
-              [_vm._v("Qiezi")]
-            ),
-            _vm._v(",Powered\n            By\n                "),
-            _c(
-              "a",
-              {
-                attrs: {
-                  target: "_blank",
-                  rel: "noreferrer noopener",
-                  href: "http://laravel.com"
-                }
-              },
-              [_vm._v("Laravel")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "pull-right not-mobile not-pad" }, [
-            _vm._v("© ITJZ-STU 2019. All rights reserved.\n                "),
-            _c(
-              "a",
-              {
-                staticStyle: { "font-weight": "normal" },
-                attrs: {
-                  href: "http://www.miitbeian.gov.cn/",
-                  target: "_blank",
-                  rel: "noreferrer noopener"
-                }
-              },
-              [_vm._v("鄂ICP备18029488号")]
-            )
+    return _c(
+      "footer",
+      { staticClass: "wrap mobile", attrs: { id: "footer" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "footer-bottom" }, [
+            _c("p", { staticClass: "pull-left not-mobile not-pad" }, [
+              _vm._v("\n            Developed By\n                "),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "https://jellybool.com",
+                    target: "_blank",
+                    rel: "noreferrer noopener"
+                  }
+                },
+                [_vm._v("Qiezi")]
+              ),
+              _vm._v(",Powered\n            By\n                "),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    target: "_blank",
+                    rel: "noreferrer noopener",
+                    href: "http://laravel.com"
+                  }
+                },
+                [_vm._v("Laravel")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "pull-right not-mobile not-pad" }, [
+              _vm._v("© ITJZ-STU 2019. All rights reserved.\n                "),
+              _c(
+                "a",
+                {
+                  staticStyle: { "font-weight": "normal" },
+                  attrs: {
+                    href: "http://www.miitbeian.gov.cn/",
+                    target: "_blank",
+                    rel: "noreferrer noopener"
+                  }
+                },
+                [_vm._v("鄂ICP备18029488号")]
+              )
+            ])
           ])
         ])
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -37160,88 +37241,93 @@ var render = function() {
       [
         _c("div", { staticClass: "top-bar" }),
         _vm._v(" "),
-        _c("div", { staticClass: "AppHeader-inner" }, [
-          _c("a", { attrs: { href: "#" } }, [
+        _c(
+          "div",
+          { staticClass: "AppHeader-inner" },
+          [
+            _c("router-link", { attrs: { to: "/" } }, [
+              _c(
+                "svg",
+                {
+                  staticClass: "not-mobile",
+                  attrs: { width: "250px", height: "50px" }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      fill: "#15B982",
+                      d:
+                        "M26.557 11.445a1.407 1.407 0 0 0-1.546 1.175 1.407 1.407 0 0 0 1.546 1.175H30.6v18.157a1.6 1.6 0 0 0 3.092 0V13.795h3.238v21.834H26.557a1.381 1.381 0 0 0-1.546 1.137 1.407 1.407 0 0 0 1.546 1.175h17.555a1.407 1.407 0 0 0 1.546-1.175 1.381 1.381 0 0 0-1.546-1.137h-4.09V13.795h4.09a1.407 1.407 0 0 0 1.546-1.175 1.407 1.407 0 0 0-1.546-1.175H26.557zm26.932 4.776a1.407 1.407 0 0 0-1.546 1.179 1.382 1.382 0 0 0 1.546 1.137h9.376v18.229a1.355 1.355 0 0 0 1.5 1.175 1.375 1.375 0 0 0 1.546-1.175V18.533h9.376A1.382 1.382 0 0 0 76.83 17.4a1.407 1.407 0 0 0-1.546-1.175H53.489zm0-4.814a1.382 1.382 0 0 0-1.546 1.137 1.379 1.379 0 0 0 1.546 1.175h21.794a1.379 1.379 0 0 0 1.546-1.175 1.382 1.382 0 0 0-1.546-1.137H53.489zm33.266.038a1.329 1.329 0 0 0-1.5 1.137 1.355 1.355 0 0 0 1.5 1.175h10.773a1.407 1.407 0 0 0 1.546-1.175 1.382 1.382 0 0 0-1.546-1.137H86.755zm0 4.814a1.355 1.355 0 0 0-1.5 1.175 1.329 1.329 0 0 0 1.5 1.137h9.227v13.267c0 2.274-2.394 4.094-5.386 4.094a5.757 5.757 0 0 1-4.838-2.312 1.782 1.782 0 0 0-2.045-.569 1.065 1.065 0 0 0-.748 1.554c1.4 2.237 4.389 3.677 7.631 3.677 4.688 0 8.478-2.881 8.478-6.444v-14.4a1.407 1.407 0 0 0-1.546-1.175H86.755zm21.9-4.814a1.381 1.381 0 0 0-1.546 1.137 1.407 1.407 0 0 0 1.546 1.175h23.59l-17.012 21.834h-3.84l13.616-17.513a1.012 1.012 0 0 0-.549-1.592 1.76 1.76 0 0 0-2.095.417L107.553 35.97a1.4 1.4 0 0 0-.449.872 1.416 1.416 0 0 0 1.546 1.1h25.086a1.407 1.407 0 0 0 1.546-1.175 1.406 1.406 0 0 0-1.546-1.175h-14.912l17.256-22.176c.549-.834.15-1.971-1.346-1.971H108.65zm34.962 12.016a1.407 1.407 0 0 0-1.546 1.175 1.406 1.406 0 0 0 1.546 1.175h9.377a1.407 1.407 0 0 0 1.546-1.175 1.407 1.407 0 0 0-1.546-1.175h-9.377zM176.03 10.99c-5.037 0-9.127 3.108-9.127 6.937 0 3.6 3.791 6.52 8.978 6.937 4.388.3 7.431 2.616 7.431 5.534 0 3.032-3.242 5.534-7.282 5.534a8.346 8.346 0 0 1-5.187-1.63c-2.194-1.706-2.743-4.245-1.346-6.368a1.076 1.076 0 0 0-.7-1.554 1.882 1.882 0 0 0-2.095.531c-1.945 3.032-1.147 6.672 2 9.06a12.346 12.346 0 0 0 7.331 2.312c5.736 0 10.374-3.563 10.374-7.884 0-4.17-4.19-7.43-10.224-7.884-3.641-.265-6.184-2.161-6.184-4.587 0-2.54 2.693-4.587 6.034-4.587 2.594 0 4.938 1.289 5.736 3.184a1.649 1.649 0 0 0 1.945.72 1.13 1.13 0 0 0 1-1.44c-1.253-2.882-4.744-4.815-8.684-4.815zm-11.67 11.864a1.858 1.858 0 0 0-2.145.3 10.846 10.846 0 0 0-2.942 7.24c0 3.487 1.945 6.861 5.286 9.287a1.922 1.922 0 0 0 2.195-.076.967.967 0 0 0-.1-1.63 9.356 9.356 0 0 1-4.289-7.581 8.9 8.9 0 0 1 2.394-5.913 1.006 1.006 0 0 0-.399-1.627zm29.376-6.634a1.407 1.407 0 0 0-1.546 1.18 1.381 1.381 0 0 0 1.546 1.137h9.376v18.229a1.355 1.355 0 0 0 1.5 1.175 1.375 1.375 0 0 0 1.546-1.175V18.533h9.377a1.382 1.382 0 0 0 1.546-1.137 1.407 1.407 0 0 0-1.546-1.175h-21.8zm0-4.814a1.381 1.381 0 0 0-1.546 1.137 1.379 1.379 0 0 0 1.546 1.175h21.8a1.38 1.38 0 0 0 1.546-1.175 1.382 1.382 0 0 0-1.546-1.137h-21.8zm54.712 0a1.379 1.379 0 0 0-1.546 1.175v15.77c0 4.17-4.489 7.581-10.025 7.581-5.486 0-9.975-3.411-9.975-7.581V12.582a1.6 1.6 0 0 0-3.092 0v15.769c0 5.458 5.885 9.931 13.067 9.931 7.232 0 13.117-4.473 13.117-9.931V12.582a1.379 1.379 0 0 0-1.546-1.175zm-16.758 0a1.379 1.379 0 0 0-1.546 1.175v15.77a1.6 1.6 0 0 0 3.092 0V12.582a1.379 1.379 0 0 0-1.546-1.175z"
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
             _c(
-              "svg",
+              "div",
               {
-                staticClass: "not-mobile",
-                attrs: { width: "250px", height: "50px" }
+                staticClass: "SearchBar not-pad not-mobile",
+                attrs: { role: "search" }
               },
               [
-                _c("path", {
-                  attrs: {
-                    fill: "#15B982",
-                    d:
-                      "M26.557 11.445a1.407 1.407 0 0 0-1.546 1.175 1.407 1.407 0 0 0 1.546 1.175H30.6v18.157a1.6 1.6 0 0 0 3.092 0V13.795h3.238v21.834H26.557a1.381 1.381 0 0 0-1.546 1.137 1.407 1.407 0 0 0 1.546 1.175h17.555a1.407 1.407 0 0 0 1.546-1.175 1.381 1.381 0 0 0-1.546-1.137h-4.09V13.795h4.09a1.407 1.407 0 0 0 1.546-1.175 1.407 1.407 0 0 0-1.546-1.175H26.557zm26.932 4.776a1.407 1.407 0 0 0-1.546 1.179 1.382 1.382 0 0 0 1.546 1.137h9.376v18.229a1.355 1.355 0 0 0 1.5 1.175 1.375 1.375 0 0 0 1.546-1.175V18.533h9.376A1.382 1.382 0 0 0 76.83 17.4a1.407 1.407 0 0 0-1.546-1.175H53.489zm0-4.814a1.382 1.382 0 0 0-1.546 1.137 1.379 1.379 0 0 0 1.546 1.175h21.794a1.379 1.379 0 0 0 1.546-1.175 1.382 1.382 0 0 0-1.546-1.137H53.489zm33.266.038a1.329 1.329 0 0 0-1.5 1.137 1.355 1.355 0 0 0 1.5 1.175h10.773a1.407 1.407 0 0 0 1.546-1.175 1.382 1.382 0 0 0-1.546-1.137H86.755zm0 4.814a1.355 1.355 0 0 0-1.5 1.175 1.329 1.329 0 0 0 1.5 1.137h9.227v13.267c0 2.274-2.394 4.094-5.386 4.094a5.757 5.757 0 0 1-4.838-2.312 1.782 1.782 0 0 0-2.045-.569 1.065 1.065 0 0 0-.748 1.554c1.4 2.237 4.389 3.677 7.631 3.677 4.688 0 8.478-2.881 8.478-6.444v-14.4a1.407 1.407 0 0 0-1.546-1.175H86.755zm21.9-4.814a1.381 1.381 0 0 0-1.546 1.137 1.407 1.407 0 0 0 1.546 1.175h23.59l-17.012 21.834h-3.84l13.616-17.513a1.012 1.012 0 0 0-.549-1.592 1.76 1.76 0 0 0-2.095.417L107.553 35.97a1.4 1.4 0 0 0-.449.872 1.416 1.416 0 0 0 1.546 1.1h25.086a1.407 1.407 0 0 0 1.546-1.175 1.406 1.406 0 0 0-1.546-1.175h-14.912l17.256-22.176c.549-.834.15-1.971-1.346-1.971H108.65zm34.962 12.016a1.407 1.407 0 0 0-1.546 1.175 1.406 1.406 0 0 0 1.546 1.175h9.377a1.407 1.407 0 0 0 1.546-1.175 1.407 1.407 0 0 0-1.546-1.175h-9.377zM176.03 10.99c-5.037 0-9.127 3.108-9.127 6.937 0 3.6 3.791 6.52 8.978 6.937 4.388.3 7.431 2.616 7.431 5.534 0 3.032-3.242 5.534-7.282 5.534a8.346 8.346 0 0 1-5.187-1.63c-2.194-1.706-2.743-4.245-1.346-6.368a1.076 1.076 0 0 0-.7-1.554 1.882 1.882 0 0 0-2.095.531c-1.945 3.032-1.147 6.672 2 9.06a12.346 12.346 0 0 0 7.331 2.312c5.736 0 10.374-3.563 10.374-7.884 0-4.17-4.19-7.43-10.224-7.884-3.641-.265-6.184-2.161-6.184-4.587 0-2.54 2.693-4.587 6.034-4.587 2.594 0 4.938 1.289 5.736 3.184a1.649 1.649 0 0 0 1.945.72 1.13 1.13 0 0 0 1-1.44c-1.253-2.882-4.744-4.815-8.684-4.815zm-11.67 11.864a1.858 1.858 0 0 0-2.145.3 10.846 10.846 0 0 0-2.942 7.24c0 3.487 1.945 6.861 5.286 9.287a1.922 1.922 0 0 0 2.195-.076.967.967 0 0 0-.1-1.63 9.356 9.356 0 0 1-4.289-7.581 8.9 8.9 0 0 1 2.394-5.913 1.006 1.006 0 0 0-.399-1.627zm29.376-6.634a1.407 1.407 0 0 0-1.546 1.18 1.381 1.381 0 0 0 1.546 1.137h9.376v18.229a1.355 1.355 0 0 0 1.5 1.175 1.375 1.375 0 0 0 1.546-1.175V18.533h9.377a1.382 1.382 0 0 0 1.546-1.137 1.407 1.407 0 0 0-1.546-1.175h-21.8zm0-4.814a1.381 1.381 0 0 0-1.546 1.137 1.379 1.379 0 0 0 1.546 1.175h21.8a1.38 1.38 0 0 0 1.546-1.175 1.382 1.382 0 0 0-1.546-1.137h-21.8zm54.712 0a1.379 1.379 0 0 0-1.546 1.175v15.77c0 4.17-4.489 7.581-10.025 7.581-5.486 0-9.975-3.411-9.975-7.581V12.582a1.6 1.6 0 0 0-3.092 0v15.769c0 5.458 5.885 9.931 13.067 9.931 7.232 0 13.117-4.473 13.117-9.931V12.582a1.379 1.379 0 0 0-1.546-1.175zm-16.758 0a1.379 1.379 0 0 0-1.546 1.175v15.77a1.6 1.6 0 0 0 3.092 0V12.582a1.379 1.379 0 0 0-1.546-1.175z"
-                  }
-                })
+                _c("div", { staticClass: "SearchBar-toolWrapper" }, [
+                  _c(
+                    "form",
+                    {
+                      staticClass: "SearchBar-tool",
+                      attrs: {
+                        method: "GET",
+                        action: "/search",
+                        "accept-charset": "UTF-8"
+                      }
+                    },
+                    [
+                      _vm._m(0),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "Button SearchBar-searchIcon Button--plain",
+                          attrs: { type: "button", id: "SearchBar-searchIcon" }
+                        },
+                        [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "Icon Icon--search",
+                              staticStyle: { height: "16px", width: "16px" },
+                              attrs: {
+                                viewBox: "0 0 16 16",
+                                width: "16",
+                                height: "16",
+                                "aria-hidden": "true"
+                              }
+                            },
+                            [
+                              _c("g", [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M12.054 10.864c.887-1.14 1.42-2.57 1.42-4.127C13.474 3.017 10.457 0 6.737 0S0 3.016 0 6.737c0 3.72 3.016 6.737 6.737 6.737 1.556 0 2.985-.533 4.127-1.42l3.103 3.104c.765.46 1.705-.37 1.19-1.19l-3.103-3.104zm-5.317.925c-2.786 0-5.053-2.267-5.053-5.053S3.95 1.684 6.737 1.684 11.79 3.95 11.79 6.737 9.522 11.79 6.736 11.79z"
+                                  }
+                                })
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ])
               ]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "SearchBar not-pad not-mobile",
-              attrs: { role: "search" }
-            },
-            [
-              _c("div", { staticClass: "SearchBar-toolWrapper" }, [
-                _c(
-                  "form",
-                  {
-                    staticClass: "SearchBar-tool",
-                    attrs: {
-                      method: "GET",
-                      action: "/search",
-                      "accept-charset": "UTF-8"
-                    }
-                  },
-                  [
-                    _vm._m(0),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "Button SearchBar-searchIcon Button--plain",
-                        attrs: { type: "button", id: "SearchBar-searchIcon" }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "Icon Icon--search",
-                            staticStyle: { height: "16px", width: "16px" },
-                            attrs: {
-                              viewBox: "0 0 16 16",
-                              width: "16",
-                              height: "16",
-                              "aria-hidden": "true"
-                            }
-                          },
-                          [
-                            _c("g", [
-                              _c("path", {
-                                attrs: {
-                                  d:
-                                    "M12.054 10.864c.887-1.14 1.42-2.57 1.42-4.127C13.474 3.017 10.457 0 6.737 0S0 3.016 0 6.737c0 3.72 3.016 6.737 6.737 6.737 1.556 0 2.985-.533 4.127-1.42l3.103 3.104c.765.46 1.705-.37 1.19-1.19l-3.103-3.104zm-5.317.925c-2.786 0-5.053-2.267-5.053-5.053S3.95 1.684 6.737 1.684 11.79 3.95 11.79 6.737 9.522 11.79 6.736 11.79z"
-                                }
-                              })
-                            ])
-                          ]
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _vm._m(1)
-        ])
+            ),
+            _vm._v(" "),
+            _vm._m(1)
+          ],
+          1
+        )
       ]
     )
   ])
@@ -37324,40 +37410,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "second-nav" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("header", { attrs: { id: "header" } }, [
-          _c("nav", [
-            _c("ul", [
-              _c("li", { staticClass: "not-mobile" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("全部视频")])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "matrix" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("学习路径")])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("问答社区")])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "not-mobile" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("文章教程")])
-              ])
-            ])
+  return _c("div", { staticClass: "second-nav" }, [
+    _c("div", { staticClass: "container" }, [
+      _c("header", { attrs: { id: "header" } }, [
+        _c("nav", [
+          _c("ul", [
+            _c(
+              "li",
+              { staticClass: "not-mobile" },
+              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("全部视频")])],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "matrix" },
+              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("学习路径")])],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("问答社区")])],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "not-mobile" },
+              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("文章教程")])],
+              1
+            )
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -37379,177 +37469,329 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "album py-5 bg-light" }, [
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          { staticClass: "row grid" },
+          _vm._l(_vm.series, function(serie) {
+            return _c("div", { key: serie.id, staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "card mb-4 box-shadow" }, [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  staticStyle: {
+                    height: "225px",
+                    width: "100%",
+                    display: "block"
+                  },
+                  attrs: {
+                    "data-src":
+                      "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail",
+                    alt: "Thumbnail [100%x225]",
+                    src:
+                      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16901017b99%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16901017b99%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+                    "data-holder-rendered": "true"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "h2",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: { name: "series", params: { id: serie.id } }
+                          }
+                        },
+                        [_vm._v(_vm._s(serie.title))]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(_vm._s(serie.description))
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1, true)
+                ])
+              ])
+            ])
+          }),
+          0
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("section", { staticClass: "jumbotron text-center" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("h1", { staticClass: "jumbotron-heading" }, [
-            _vm._v("从高质量的视频中学习 Web 开发技术")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "lead text-muted" }, [
-            _vm._v("投资在学习上的时间和金钱总有一天会回赠给你自己 ！")
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-success my-2 btn-lg",
-                attrs: { href: "#", role: "button" }
-              },
-              [_vm._v("浏览所有的课程")]
-            )
-          ])
+    return _c("section", { staticClass: "jumbotron text-center" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "jumbotron-heading" }, [
+          _vm._v("从高质量的视频中学习 Web 开发技术")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead text-muted" }, [
+          _vm._v("投资在学习上的时间和金钱总有一天会回赠给你自己 ！")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success my-2 btn-lg",
+              attrs: { href: "#", role: "button" }
+            },
+            [_vm._v("浏览所有的课程")]
+          )
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "album py-5 bg-light" }, [
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "d-flex justify-content-between align-items-center" },
+      [
+        _c("small", [_vm._v("时长: 146 分钟")]),
+        _vm._v(" "),
+        _c("small", { staticClass: "text-muted" }, [_vm._v("15 个视频")])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      {
+        staticClass: "banner banner__series",
+        staticStyle: {
+          background:
+            "linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69))",
+          "margin-bottom": "40px"
+        }
+      },
+      [
         _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-4" }, [
-              _c("div", { staticClass: "card mb-4 box-shadow" }, [
-                _c("img", {
-                  staticClass: "card-img-top",
+          _c("div", { staticClass: "col-md-6 series-flex" }, [
+            _c("div", { staticClass: "series-text" }, [
+              _c(
+                "h1",
+                {
+                  staticClass: "series-title wow flipInX animated",
                   staticStyle: {
-                    height: "225px",
-                    width: "100%",
-                    display: "block"
-                  },
-                  attrs: {
-                    "data-src":
-                      "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail",
-                    alt: "Thumbnail [100%x225]",
-                    src:
-                      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16901017b99%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16901017b99%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-                    "data-holder-rendered": "true"
+                    visibility: "visible",
+                    "animation-name": "flipInX",
+                    color: "rgb(255, 255, 255)"
                   }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h2", [_vm._v("高可用服务架构")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "高可用服务架构系列将会从宏观的角度出发，将负载均衡，MySQL 主从数据库，Re..."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex justify-content-between align-items-center"
-                    },
-                    [
-                      _c("small", [_vm._v("时长: 146 分钟")]),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "text-muted" }, [
-                        _vm._v("15 个视频")
-                      ])
-                    ]
+                },
+                [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(_vm.serie.title) +
+                      "\n                    "
                   )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-4" }, [
-              _c("div", { staticClass: "card mb-4 box-shadow" }, [
-                _c("img", {
-                  staticClass: "card-img-top",
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
                   staticStyle: {
-                    height: "225px",
-                    width: "100%",
-                    display: "block"
-                  },
-                  attrs: {
-                    "data-src":
-                      "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail",
-                    alt: "Thumbnail [100%x225]",
-                    src:
-                      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16901017b99%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16901017b99%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-                    "data-holder-rendered": "true"
+                    "margin-top": "20px",
+                    color: "rgb(255, 255, 255)"
                   }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h2", [_vm._v("高可用服务架构")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "高可用服务架构系列将会从宏观的角度出发，将负载均衡，MySQL 主从数据库，Re..."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex justify-content-between align-items-center"
-                    },
-                    [
-                      _c("small", [_vm._v("时长: 146 分钟")]),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "text-muted" }, [
-                        _vm._v("15 个视频")
-                      ])
-                    ]
+                },
+                [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(_vm.serie.description) +
+                      "\n                    "
                   )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-4" }, [
-              _c("div", { staticClass: "card mb-4 box-shadow" }, [
-                _c("img", {
-                  staticClass: "card-img-top",
-                  staticStyle: {
-                    height: "225px",
-                    width: "100%",
-                    display: "block"
-                  },
-                  attrs: {
-                    "data-src":
-                      "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail",
-                    alt: "Thumbnail [100%x225]",
-                    src:
-                      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16901017b99%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16901017b99%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-                    "data-holder-rendered": "true"
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h2", [_vm._v("高可用服务架构")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "高可用服务架构系列将会从宏观的角度出发，将负载均衡，MySQL 主从数据库，Re..."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex justify-content-between align-items-center"
-                    },
-                    [
-                      _c("small", [_vm._v("时长: 146 分钟")]),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "text-muted" }, [
-                        _vm._v("15 个视频")
-                      ])
-                    ]
-                  )
-                ])
-              ])
+                ]
+              )
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "col-md-3",
+            staticStyle: { color: "rgb(255, 255, 255)", "margin-top": "10px" }
+          }),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "col-md-3", staticStyle: { "margin-top": "10px" } },
+      [
+        _c("div", { attrs: { id: "Completion" } }, [
+          _c(
+            "a",
+            {
+              staticClass: "lesson-watch-later-button btn btnBlack",
+              attrs: { href: "https://www.codecasts.com/vip" }
+            },
+            [_vm._v("订阅观看所有视频")]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+            _c(
+              "table",
+              {
+                staticClass: "episode-outline table table-hover table-striped",
+                staticStyle: {
+                  background: "rgb(255, 255, 255)",
+                  "box-shadow": "rgba(0, 0, 0, 0.36) 0px 3px 6px"
+                }
+              },
+              [
+                _c("tbody", [
+                  _c("tr", { staticClass: "episode-wrap" }, [
+                    _c(
+                      "td",
+                      {
+                        staticClass: "episode-index",
+                        attrs: { title: "已观看" }
+                      },
+                      [
+                        _c("i", { staticClass: "material-icons" }, [
+                          _vm._v("check_circle")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "episode-title" }, [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href:
+                              "https://www.codecasts.com/series/highly-available-server-cluster/episodes/1"
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "material-icons md-18" }, [
+                            _vm._v("play_circle_outline")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "episode-title__body" }, [
+                            _vm._v("理论知识简介")
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "episode-length" }, [
+                      _vm._v("\n                                    04:47 "),
+                      _c(
+                        "span",
+                        { staticClass: "label label-primary label-create" },
+                        [_vm._v("2018-08-16 ")]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", { staticClass: "episode-wrap" }, [
+                    _c(
+                      "td",
+                      {
+                        staticClass: "episode-index",
+                        attrs: { title: "已观看" }
+                      },
+                      [
+                        _c("i", { staticClass: "material-icons" }, [
+                          _vm._v("check_circle")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "episode-title" }, [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href:
+                              "https://www.codecasts.com/series/highly-available-server-cluster/episodes/1"
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "material-icons md-18" }, [
+                            _vm._v("play_circle_outline")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "episode-title__body" }, [
+                            _vm._v("理论知识简介")
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "episode-length" }, [
+                      _vm._v("\n                                    04:47 "),
+                      _c(
+                        "span",
+                        { staticClass: "label label-primary label-create" },
+                        [_vm._v("2018-08-16 ")]
+                      )
+                    ])
+                  ])
+                ])
+              ]
+            )
           ])
         ])
       ])
@@ -52323,14 +52565,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * all outgoing HTTP requests automatically have it attached. This is just
  * a simple convenience so we don't have to attach every token manually.
  */
+// let token = document.head.querySelector('meta[name="csrf-token"]');
+//
+// if (token) {
+//     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+// } else {
+//     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+// }
 
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -52692,6 +52934,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/Serie.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/pages/Serie.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Serie_vue_vue_type_template_id_1c8745d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Serie.vue?vue&type=template&id=1c8745d6& */ "./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6&");
+/* harmony import */ var _Serie_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Serie.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/Serie.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Serie_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Serie_vue_vue_type_template_id_1c8745d6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Serie_vue_vue_type_template_id_1c8745d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/Serie.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/Serie.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/pages/Serie.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Serie.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Serie.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_template_id_1c8745d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Serie.vue?vue&type=template&id=1c8745d6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_template_id_1c8745d6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_template_id_1c8745d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes.js":
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
@@ -52706,6 +53017,10 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [{
   path: '/',
   components: __webpack_require__(/*! ./components/pages/Home */ "./resources/js/components/pages/Home.vue")
+}, {
+  path: '/series/:id',
+  name: 'series',
+  components: __webpack_require__(/*! ./components/pages/Serie */ "./resources/js/components/pages/Serie.vue")
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   mode: 'history',

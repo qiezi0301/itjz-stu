@@ -13,6 +13,20 @@
   color: #111
 }
 
+#footer,.post__quote {
+  font-family: Maven Pro,Microsoft YaHei,sans-serif!important;
+}
+
+#footer {
+  border-top: 1px solid #eee;
+  min-height: 100px;
+  margin-bottom: 1em;
+  color: #8e8e8e;
+  background: #f9f9f9;
+  padding-top: 65px;
+  letter-spacing: -.2px
+}
+
 #footer .footer-bottom a {
   color: #111;
   font-weight: 700
@@ -39,6 +53,22 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline
+.wrap {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  counter-reset: section
+}
+
+.wrap--white {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 60px
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    padding-top:2em;
+    padding-bottom: 2em
+  }
 }

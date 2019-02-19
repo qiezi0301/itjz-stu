@@ -1,5 +1,5 @@
 <template>
-    <footer class="text-muted">
+    <footer class="wrap mobile" id="footer">
         <div class="container">
             <div class="footer-bottom">
                 <p class="pull-left not-mobile not-pad">
