@@ -6,7 +6,7 @@
 
     <title>php stu</title>
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
-    <link href="{{ asset('/css/player.css') }}" rel="stylesheet">\
+    <link href="{{ asset('/css/player.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="application">
