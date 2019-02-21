@@ -1,5 +1,16 @@
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-size: 13px;
+}
+
+button,input,select,textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit
 }
 
 .top-bar {
@@ -273,12 +284,14 @@ body {
   display: inline-block
 }
 
-
-
 .Button--primary.Button--blue {
   color: #fff;
   background: -webkit-gradient(linear,left top,right top,from(#15b982),to(#01d18b));
   background: linear-gradient(90deg,#15b982,#01d18b);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16);
   box-shadow: 0 3px 6px rgba(0,0,0,.16)
+}
+
+.Button.focus,.Button:focus,.Button:hover {
+  background-color: #d7dfea
 }

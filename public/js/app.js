@@ -1958,6 +1958,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     var _this = this;
@@ -37472,34 +37492,26 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "album py-5 bg-light" }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "div",
-          { staticClass: "row grid" },
-          _vm._l(_vm.series, function(serie) {
-            return _c("div", { key: serie.id, staticClass: "col-md-4" }, [
-              _c("div", { staticClass: "card mb-4 box-shadow" }, [
-                _c("img", {
-                  staticClass: "card-img-top",
-                  staticStyle: {
-                    height: "225px",
-                    width: "100%",
-                    display: "block"
-                  },
-                  attrs: {
-                    "data-src":
-                      "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail",
-                    alt: "Thumbnail [100%x225]",
-                    src:
-                      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16901017b99%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16901017b99%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-                    "data-holder-rendered": "true"
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
+    _c("main", { attrs: { id: "series-all" } }, [
+      _c("div", { staticClass: "series-message" }, [
+        _vm._v(
+          "\n            投资在学习上的时间和金钱总有一天会回赠给你自己 ！\n        "
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "grid flex" },
+        _vm._l(_vm.series, function(serie) {
+          return _c(
+            "article",
+            { key: serie.id, staticClass: "card flex flex-column box-shadow" },
+            [
+              _c("div", { staticClass: "flex align-center flex-between p-1" }, [
+                _c("div", { staticClass: "flex align-center max70" }, [
                   _c(
                     "h2",
+                    { staticClass: "m-b-0 max70" },
                     [
                       _c(
                         "router-link",
@@ -37512,20 +37524,26 @@ var render = function() {
                       )
                     ],
                     1
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(_vm._s(serie.description))
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(1, true)
+                  )
                 ])
-              ])
-            ])
-          }),
-          0
-        )
-      ])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "flex-full p-1 p-t-0 p-b-0" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(serie.description) +
+                    "\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _vm._m(1, true),
+              _vm._v(" "),
+              _vm._m(2, true)
+            ]
+          )
+        }),
+        0
+      )
     ])
   ])
 }
@@ -37534,27 +37552,53 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "jumbotron text-center" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("h1", { staticClass: "jumbotron-heading" }, [
-          _vm._v("从高质量的视频中学习 Web 开发技术")
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "lead text-muted" }, [
-          _vm._v("投资在学习上的时间和金钱总有一天会回赠给你自己 ！")
-        ]),
-        _vm._v(" "),
-        _c("p", [
+    return _c("div", { staticClass: "jumbotron index" }, [
+      _c(
+        "div",
+        {
+          staticClass: "container series-home Home__sumary",
+          staticStyle: { "z-index": "2" }
+        },
+        [
+          _c("div", { staticClass: "series-banner" }, [
+            _c("h1", { staticClass: "jumbotron__heading index" }, [
+              _vm._v(
+                "\n                    从高质量的视频中学习\n                    "
+              ),
+              _c("br"),
+              _vm._v("\n                    Web 开发技术\n                ")
+            ])
+          ]),
+          _vm._v(" "),
           _c(
-            "a",
+            "h4",
             {
-              staticClass: "btn btn-success my-2 btn-lg",
-              attrs: { href: "#", role: "button" }
+              staticClass: "jumbotron__sub-heading not-mobile not-pad",
+              staticStyle: { "margin-bottom": "72px" }
             },
-            [_vm._v("浏览所有的课程")]
-          )
-        ])
-      ])
+            [
+              _vm._v(
+                "\n                所有视频都是免费的，注册即可观看！\n            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "slogan-iphone" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn-action btn-action-primary",
+                attrs: { href: "https://www.codecasts.com/user/register" }
+              },
+              [
+                _vm._v(
+                  "\n                    马上加入 CODECASTS\n                "
+                )
+              ]
+            )
+          ])
+        ]
+      )
     ])
   },
   function() {
@@ -37562,12 +37606,61 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
-      { staticClass: "d-flex justify-content-between align-items-center" },
+      "a",
+      {
+        staticClass: "block-wrapper full-width",
+        attrs: {
+          href:
+            "https://www.codecasts.com/series/highly-available-server-cluster"
+        }
+      },
       [
-        _c("small", [_vm._v("时长: 146 分钟")]),
+        _c("img", {
+          staticClass: "b-lazy b-loaded",
+          attrs: {
+            alt: "高可用服务架构",
+            src:
+              "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16901017b99%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16901017b99%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+          }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "toolbar flex flex-between align-center" },
+      [
+        _c(
+          "p",
+          { staticClass: "max60", staticStyle: { "margin-top": "10px" } },
+          [
+            _c("strong", [_vm._v("时长:")]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "toolbar-tag ",
+                attrs: { href: "/learn/laravel" }
+              },
+              [_vm._v("146 分钟")]
+            )
+          ]
+        ),
         _vm._v(" "),
-        _c("small", { staticClass: "text-muted" }, [_vm._v("15 个视频")])
+        _c("div", { staticClass: "flex align-center" }, [
+          _c(
+            "time",
+            {
+              staticClass: "m-r-1",
+              attrs: { datetime: "2017-06-27 06:42:48" }
+            },
+            [_c("strong", [_vm._v(" 15 个视频 ")])]
+          )
+        ])
       ]
     )
   }
