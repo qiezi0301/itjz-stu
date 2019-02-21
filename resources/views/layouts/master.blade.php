@@ -6,11 +6,13 @@
 
     <title>php stu</title>
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+    <link href="{{ asset('/css/player.css') }}" rel="stylesheet">\
 </head>
 <body>
     <div id="application">
         <app></app>
     </div>
     <script src="{{asset('/js/app.js')}}"></script>
+    <script src="{{asset('/js/player.js')}}"></script>
 </body>
 </html>

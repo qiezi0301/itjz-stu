@@ -9,6 +9,11 @@ let routes = [
         path: '/series/:id',
         name: 'series',
         components: require('./components/pages/Serie')
+    },
+    {
+        path: '/lessons/:id',
+        name: 'lessons',
+        components: require('./components/pages/Lesson')
     }
 ];
 

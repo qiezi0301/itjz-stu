@@ -1995,6 +1995,73 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Lesson.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/Lesson.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Lesson"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Serie.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/Serie.vue?vue&type=script&lang=js& ***!
@@ -37671,6 +37738,174 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Lesson.vue?vue&type=template&id=53b47c4e&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/Lesson.vue?vue&type=template&id=53b47c4e& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row video-row video-mobile" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "col-md-10" }, [
+          _c("div", { staticClass: "next-lesson previous" }, [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "https://www.codecasts.com/series/highly-available-server-cluster/episodes/1"
+                }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "icon",
+                    attrs: {
+                      t: "1499272216574",
+                      viewBox: "0 0 1024 1024",
+                      version: "1.1",
+                      xmlns: "http://www.w3.org/2000/svg",
+                      "p-id": "1010",
+                      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                      width: "20",
+                      height: "20"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        d: "M877.216 491.808",
+                        "p-id": "1011",
+                        fill: "#ffffff"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M758.528 949.984c12.512-12.512 13.248-31.872 2.048-43.776L384.096 529.696c-16.16-15.328-16.096-19.328 0-35.424L760.576 117.824c11.232-11.872 10.464-31.264-2.048-43.776-12.736-12.736-32.608-13.44-44.448-1.632L295.872 490.592C290.72 495.744 288.416 502.464 288 509.376l0 5.248c0.448 6.944 2.752 13.632 7.872 18.784l418.176 418.176C725.92 963.392 745.824 962.688 758.528 949.984z",
+                        "p-id": "1012",
+                        fill: "#ffffff"
+                      }
+                    })
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "next-lesson next" }, [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "https://www.codecasts.com/series/highly-available-server-cluster/episodes/2"
+                }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "icon",
+                    attrs: {
+                      t: "1499272149423",
+                      viewBox: "0 0 1024 1024",
+                      version: "1.1",
+                      xmlns: "http://www.w3.org/2000/svg",
+                      "p-id": "2615",
+                      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                      width: "20",
+                      height: "20"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M685.770333 503.013157 234.961455 67.864711 299.369332 5.718523 750.166016 440.855189 750.369047 440.659181 814.545455 502.640081 814.359971 502.819133 814.545455 502.998198 750.137577 565.144381 749.962519 564.975379 301.047529 998.266931 236.871121 936.313572 685.770333 503.013157Z",
+                        "p-id": "2616",
+                        fill: "#ffffff"
+                      }
+                    })
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "video",
+      {
+        staticClass:
+          "video-js vjs-big-play-centered vjs-fluid vjs-paused codecasts_video-dimensions vjs-controls-enabled vjs-workinghover vjs-v6 vjs-user-inactive",
+        staticStyle: { outline: "none" },
+        attrs: {
+          id: "my-player",
+          controls: "",
+          preload: "auto",
+          role: "region",
+          lang: "zh",
+          poster: "/images/oceans.png",
+          "data-setup": '{"playbackRates":[0.5,1,1.25,1.5,1.75,2]}'
+        }
+      },
+      [
+        _c("source", {
+          attrs: { src: "/images/oceans.mp4", type: "video/mp4" }
+        }),
+        _vm._v(" "),
+        _c("p", { staticClass: "vjs-no-js" }, [
+          _vm._v(
+            "\n                        无法播放该视频，请换一个\n                        "
+          ),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://videojs.com/html5-video-support/",
+                target: "_blank"
+              }
+            },
+            [
+              _vm._v(
+                "\n                            支持HTML5视频功能的浏览器\n                        "
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/Serie.vue?vue&type=template&id=1c8745d6& ***!
@@ -53027,6 +53262,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/Lesson.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/pages/Lesson.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Lesson_vue_vue_type_template_id_53b47c4e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Lesson.vue?vue&type=template&id=53b47c4e& */ "./resources/js/components/pages/Lesson.vue?vue&type=template&id=53b47c4e&");
+/* harmony import */ var _Lesson_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Lesson.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/Lesson.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Lesson_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Lesson_vue_vue_type_template_id_53b47c4e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Lesson_vue_vue_type_template_id_53b47c4e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/Lesson.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/Lesson.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/pages/Lesson.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Lesson.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Lesson.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/Lesson.vue?vue&type=template&id=53b47c4e&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/pages/Lesson.vue?vue&type=template&id=53b47c4e& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson_vue_vue_type_template_id_53b47c4e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Lesson.vue?vue&type=template&id=53b47c4e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Lesson.vue?vue&type=template&id=53b47c4e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson_vue_vue_type_template_id_53b47c4e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson_vue_vue_type_template_id_53b47c4e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/Serie.vue":
 /*!*************************************************!*\
   !*** ./resources/js/components/pages/Serie.vue ***!
@@ -53114,6 +53418,10 @@ var routes = [{
   path: '/series/:id',
   name: 'series',
   components: __webpack_require__(/*! ./components/pages/Serie */ "./resources/js/components/pages/Serie.vue")
+}, {
+  path: '/lessons/:id',
+  name: 'lessons',
+  components: __webpack_require__(/*! ./components/pages/Lesson */ "./resources/js/components/pages/Lesson.vue")
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   mode: 'history',
