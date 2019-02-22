@@ -1,0 +1,468 @@
+@font-face{font-family:"socialshare";src:url("/fonts/iconfont.eot");src:url("/fonts/iconfont.eot?#iefix") format("embedded-opentype"),url("/fonts/iconfont.woff") format("woff"),url("/fonts/iconfont.ttf") format("truetype"),url("/fonts/iconfont.svg#iconfont") format("svg")}.social-share{font-family:"socialshare" !important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0.2px;-moz-osx-font-smoothing:grayscale}.social-share .icon-tencent:before{content:"\f07a"}.social-share .icon-qq:before{content:"\f11a"}.social-share .icon-weibo:before{content:"\f12a"}.social-share .icon-wechat:before{content:"\f09a"}.social-share .icon-douban:before{content:"\f10a"}.social-share .icon-heart:before{content:"\f20a"}.social-share .icon-like:before{content:"\f00a"}.social-share .icon-qzone:before{content:"\f08a"}.social-share .icon-linkedin:before{content:"\f01a"}.social-share .icon-diandian:before{content:"\f05a"}.social-share .icon-facebook:before{content:"\f03a"}.social-share .icon-google:before{content:"\f04a"}.social-share .icon-twitter:before{content:"\f06a"}.social-share a{position:relative;text-decoration:none;margin:4px;display:inline-block}.social-share .social-share-icon{position:relative;display:inline-block;width:32px;height:32px;font-size:20px;border-radius:50%;line-height:32px;border:1px solid #666;color:#666;text-align:center;vertical-align:middle;transition:background 0.6s ease-out 0s}.social-share .social-share-icon:hover{background:#666;color:#fff}.social-share .icon-weibo{color:#ff763b;border-color:#ff763b}.social-share .icon-weibo:hover{background:#ff763b}.social-share .icon-tencent{color:#56b6e7;border-color:#56b6e7}.social-share .icon-tencent:hover{background:#56b6e7}.social-share .icon-qq{color:#56b6e7;border-color:#56b6e7}.social-share .icon-qq:hover{background:#56b6e7}.social-share .icon-qzone{color:#FDBE3D;border-color:#FDBE3D}.social-share .icon-qzone:hover{background:#FDBE3D}.social-share .icon-douban{color:#33b045;border-color:#33b045}.social-share .icon-douban:hover{background:#33b045}.social-share .icon-linkedin{color:#0077B5;border-color:#0077B5}.social-share .icon-linkedin:hover{background:#0077B5}.social-share .icon-facebook{color:#44619D;border-color:#44619D}.social-share .icon-facebook:hover{background:#44619D}.social-share .icon-google{color:#db4437;border-color:#db4437}.social-share .icon-google:hover{background:#db4437}.social-share .icon-twitter{color:#55acee;border-color:#55acee}.social-share .icon-twitter:hover{background:#55acee}.social-share .icon-diandian{color:#307DCA;border-color:#307DCA}.social-share .icon-diandian:hover{background:#307DCA}.social-share .icon-wechat{position:relative;color:#7bc549;border-color:#7bc549}.social-share .icon-wechat:hover{background:#7bc549}.social-share .icon-wechat .wechat-qrcode{opacity:0;filter:alpha(opacity=0);visibility:hidden;position:absolute;z-index:9;top:-205px;left:-84px;width:200px;height:192px;color:#666;font-size:12px;text-align:center;background-color:#fff;box-shadow:0 2px 10px #aaa;transition:all 200ms;-webkit-tansition:all 350ms;-moz-transition:all 350ms}.social-share .icon-wechat .wechat-qrcode h4{font-weight:normal;height:26px;line-height:26px;font-size:12px;background-color:#f3f3f3;margin:0;padding:0;color:#777}.social-share .icon-wechat .wechat-qrcode .qrcode{width:105px;margin:10px auto}.social-share .icon-wechat .wechat-qrcode .help p{font-weight:normal;line-height:16px;padding:0;margin:0}.social-share .icon-wechat .wechat-qrcode:after{content:'';position:absolute;left:50%;margin-left:-6px;bottom:-13px;width:0;height:0;border-width:8px 6px 6px 6px;border-style:solid;border-color:#fff transparent transparent transparent}.social-share .icon-wechat:hover .wechat-qrcode{opacity:1;filter:alpha(opacity=100);visibility:visible}
+.social-share [class*=" icon-"]:before, .social-share [class^=icon-]:before{
+    font-family: "socialshare" !important;
+}
+/*!
+ * # Semantic UI 2.2.4 - Comment
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Standard
+*******************************/
+
+
+/*--------------
+    Comments
+---------------*/
+
+.ui.comments {
+  margin: 1.5em 0em;
+  padding-bottom: 30px;
+}
+.ui.comments:first-child {
+  margin-top: 0em;
+}
+.ui.comments:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+     Comment
+---------------*/
+
+.ui.comments .comment {
+  position: relative;
+  background: none;
+  margin: 0.5em 0em 0em;
+  padding: 0.5em 0em 0em;
+  border: none;
+  border-top: none;
+  line-height: 1.2;
+}
+.ui.comments .comment:first-child {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+
+/*--------------------
+    Nested Comments
+---------------------*/
+
+.ui.comments .comment .comments {
+  margin: 0em 0em 0.5em 0.5em;
+  padding: 1em 0em 1em 1em;
+}
+.ui.comments .comment .comments:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.ui.comments .comment .comments .comment {
+  border: none;
+  border-top: none;
+  background: none;
+}
+
+/*--------------
+     Avatar
+---------------*/
+
+.ui.comments .comment .avatar {
+  display: block;
+  width: 3em;
+  height: auto;
+  float: left;
+  margin: 0.2em 0em 0em;
+}
+.ui.comments .comment img.avatar,
+.ui.comments .comment .avatar img {
+  display: block;
+  margin: 0em auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.comments .comment > .content {
+  display: block;
+}
+
+/* If there is an avatar move content over */
+.ui.comments .comment > .avatar ~ .content {
+  margin-left: 3.5em;
+}
+
+/*--------------
+     Author
+---------------*/
+
+.ui.comments .comment .author {
+  font-size: 1em;
+  color: #15B982;
+  font-weight: bold;
+}
+.ui.comments .comment a.author {
+  cursor: pointer;
+}
+.ui.comments .comment a.author:hover {
+  color: #15B982;
+}
+
+/*--------------
+     Metadata
+---------------*/
+
+.ui.comments .comment .metadata {
+  display: inline-block;
+  margin-left: 0.5em;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.875em;
+}
+.ui.comments .comment .metadata > * {
+  display: inline-block;
+  margin: 0em 0.5em 0em 0em;
+}
+.ui.comments .comment .metadata > :last-child {
+  margin-right: 0em;
+}
+
+/*--------------------
+     Comment Text
+---------------------*/
+
+.ui.comments .comment .text {
+  margin: 0.25em 0em 0.5em;
+  font-size: 1em;
+  word-wrap: break-word;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.3;
+}
+
+/*--------------------
+     User Actions
+---------------------*/
+
+.ui.comments .comment .actions {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.ui.comments .comment .actions a {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0em 0.75em 0em 0em;
+  color: rgba(0, 0, 0, 0.4);
+}
+.ui.comments .comment .actions a:last-child {
+  margin-right: 0em;
+}
+.ui.comments .comment .actions a.active,
+.ui.comments .comment .actions a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*--------------------
+      Reply Form
+---------------------*/
+
+.ui.comments > .reply.form {
+  margin-top: 1em;
+}
+.ui.comments .comment .reply.form {
+  width: 100%;
+  margin-top: 1em;
+}
+.ui.comments .reply.form textarea {
+  font-size: 1em;
+  height: 12em;
+}
+
+
+/*******************************
+            State
+*******************************/
+
+.ui.collapsed.comments,
+.ui.comments .collapsed.comments,
+.ui.comments .collapsed.comment {
+  display: none;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*--------------------
+        Threaded
+---------------------*/
+
+.ui.threaded.comments .comment .comments {
+  margin: -1.5em 0 -1em 1.25em;
+  padding: 2.4em 0em 2em 2.25em;
+  /*box-shadow: -1px 0px 0px rgba(34, 36, 38, 0.15);*/
+}
+
+/*--------------------
+        Minimal
+---------------------*/
+
+.ui.minimal.comments .comment .actions {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: auto;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.ui.minimal.comments .comment > .content:hover > .actions {
+  opacity: 1;
+}
+
+.ui.mini.comments {
+  font-size: 0.78571429rem;
+}
+.ui.tiny.comments {
+  font-size: 0.85714286rem;
+}
+.ui.small.comments {
+  font-size: 0.9em;
+}
+.ui.comments {
+  font-size: 1em;
+}
+.ui.large.comments {
+  font-size: 1.1em;
+}
+.ui.big.comments {
+  font-size: 1.28571429rem;
+}
+.ui.huge.comments {
+  font-size: 1.2em;
+}
+.ui.massive.comments {
+  font-size: 1.71428571rem;
+}
+
+.comments .text p {
+    margin: 0 0 10px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.ui.threaded.comments .comment.nest--bottom .comments{
+    margin: -1.5em 0 -1em -2.25em;
+    padding: 3em 0em .75em 2.25em;
+}
+.ui.comments .reply-form-container .reply.form textarea {
+    font-size: 1.4em;
+    height: 6em;
+    min-height: 6em;
+}
+.ui.comments .Button--primary {
+    padding: 8px 30px;
+}
+
+.ui.comments .comment .avatar.avatar-large {
+    width: 3.5em;
+}
+.ui.comments .comment > .avatar.avatar-large ~ .content {
+    margin-left: 4.5em;
+}
+.ui.form textarea
+{
+    width: 100%;
+    vertical-align: top;
+}
+.ui.form .field {
+    clear: both;
+    margin: 0em 0em 1em;
+}
+.ui.form .field:last-child,
+.ui.form .fields:last-child .field {
+    margin-bottom: 0em;
+}
+.ui.form .fields .field {
+    clear: both;
+    margin: 0em;
+}
+.ui.form textarea {
+    margin: 0em;
+    -webkit-appearance: none;
+    tap-highlight-color: rgba(255, 255, 255, 0);
+    padding: 0.78571429em 1em;
+    background: #FFFFFF;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    outline: none;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 0.28571429rem;
+    box-shadow: 0em 0em 0em 0em transparent inset;
+    -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+    transition: color 0.1s ease, border-color 0.1s ease;
+    font-size: 1em;
+    line-height: 1.2857;
+    resize: vertical;
+}
+.ui.form textarea:not([rows]) {
+    height: 12em;
+    min-height: 8em;
+    max-height: 24em;
+}
+.ui.form textarea,
+.ui.form input[type="checkbox"] {
+    vertical-align: top;
+}
+.ui.mini.form {
+    font-size: 0.78571429rem;
+}
+.ui.tiny.form {
+    font-size: 0.85714286rem;
+}
+.ui.small.form {
+    font-size: 0.92857143rem;
+}
+.ui.form {
+    font-size: 1rem;
+}
+.ui.large.form {
+    font-size: 1.14285714rem;
+}
+.ui.big.form {
+    font-size: 1.28571429rem;
+}
+.ui.huge.form {
+    font-size: 1.42857143rem;
+}
+.ui.massive.form {
+    font-size: 1.71428571rem;
+}
+
+.Replies__From .ui.form textarea:not([rows]) {
+    height: 3.5em;
+    min-height: 3.5em;
+    line-height: 1.25;
+    font-size: 14px;
+}
+.Replies__From .Comment--post--button , .Comment--cancel--button {
+    display: none;
+}
+.Replies__From .Button--primary {
+    padding: 8px 40px;
+}
+.Replies__From .avatar {
+    display: block;
+    width: 5em;
+    height: auto;
+    float: left;
+    margin: 0 1.5em 0 0;
+}
+.Replies__From .avatar img {
+    display: block;
+    margin: 0em auto;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+.Replies__From .ui.form .field {
+    display: flex;
+}
+
+.Replies__From .ui.reply.form.active .Comment--post--button ,.Replies__From .ui.reply.form.active .Comment--cancel--button{
+    display: inline-block;
+}
+.Replies__From .ui.reply.form.active .Comment--post--button {
+    margin-left: 2em;
+}
+.Replies__From .ui.reply.form.active .Comment--cancel--button {
+    margin-left: 6em;
+    font-size: 1rem;
+    padding: 7px 30px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.Replies__From .ui.reply.form.active textarea {
+    height: 6em;
+}
+
+.ui.reply.form .Reply--cancel--button {
+    font-size: 1rem;
+    padding: 7px 30px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.ui.reply.form .reply__button {
+    margin-left: 2em;
+}
+.ui.form .errors.comment-errors {
+    display: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+/*# sourceMappingURL=share-comment.css.map */
+body {
+    overflow-x: hidden;
+}
+.fa-trophy:before {
+    font-family: 'FontAwesome' !important;
+}
+.ui.ribbon.label:after {
+    display: none;
+}
+
+h1.lesson-title > a, a.video-btn, button.video-btn {
+    border: none;
+    border-bottom: 1px solid #cbcbcb;
+    background: #e7e7e7;
+    color: #7b7b7b;
+}
+button.video-btn.SubscriptionMenu-button--follow {
+    border: none;
+    border-bottom:none;
+    text-decoration: none;
+    background: #00ADB5;
+    color: #fff;
+}
+
+h1.lesson-title > a:hover, a.video-btn:hover, button.video-btn:hover {
+    text-decoration: none;
+    background: #15B982;
+    color: #fff;
+}
+
+button.weixin.qq.video-btn:hover, button.video-alipay.video-btn:hover {
+    text-decoration: none;
+    background: #00ADB5;
+    color: #fff;
+}
+
+
+.lesson-title-meta > a:hover {
+    color: #00ADB5;
+}
+
+.webui-popover {
+    border:none;
+    padding: 0;
+    min-width: 150px;
+    min-height: 150px;
+}
+.webui-popover i.icon-refresh{
+    top: 38%;
+    left: 50%;
+}
+h1.lesson-title {
+    margin-top: 10px;
+}

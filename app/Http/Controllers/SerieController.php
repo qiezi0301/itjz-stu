@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SerieController extends Controller
 {
     public function index() {
-        return Serie::paginate(9);
+        return Serie::paginate(30);
     }
 
     public function show(Serie $serie) {

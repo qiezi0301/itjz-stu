@@ -27,10 +27,9 @@
                         </a>
                     </div>
                     <video
-                            id="my-player"
+                            id="myVideo"
                             class="video-js vjs-big-play-centered vjs-fluid vjs-paused codecasts_video-dimensions vjs-controls-enabled vjs-workinghover vjs-v6 vjs-user-inactive"
                             controls
-                            preload="auto"
                             role="region"
                             style="outline: none;"
                             lang="zh"
@@ -47,11 +46,64 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-md-10 col-md-offset-1">
+                    <article class="article clearfix">
+                        <h1 class="lesson-title">
+                            Nginx 实现负载均衡
+                            <a class="btn btn-default pay video-weixin video-btn not-mobile not-pad">收藏</a>
+                            <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=31435d309d493dcf3eef7f06cdc697edffefccbda13c43df97e47ca38e797034" style="color: rgb(34, 34, 34);">
+                                <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="codecasts 官方群-3" title="codecasts 官方群-3">
+                                <span>595928952</span>
+                            </a>
+                        </h1>
+                        <p class="lesson-title-meta">
+                            <a href="https://www.codecasts.com/series/highly-available-server-cluster" style="font-weight: bold;">高可用服务架构 </a>
+                            <span style="font-weight: bold;"> >> </span>
+                            <a href="https://www.codecasts.com/series/highly-available-server-cluster/episodes/2" style="font-weight: bold;">Nginx 实现负载均衡</a>
+                            视频发布于 2018-08-16
+                        </p>
+                        <div class="lesson-body col-sm-12">
+                            使用 Nginx 的代理功能实现负载均衡的架构。
+                        </div>
+                        <div class="social-share"></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <comment-list></comment-list>
+        <comment-form></comment-form>
     </div>
+
 </template>
 
 <script>
+    import 'social-share.js/dist/css/share.min.css';
+    import 'social-share.js/dist/js/social-share.min';
+
+    import CommentList from '../comment/CommentList';
+    import CommentForm from '../comment/CommentForm';
+
     export default {
-        name: "Lesson"
+        name: "Lesson",
+        components: {
+            CommentList,
+            CommentForm
+        },
+        mounted() {
+            this.initVideo();
+        },
+        methods: {
+            initVideo() {
+                //初始化视频方法
+                let myPlayer = this.$video(myVideo, {
+                    //确定播放器是否具有用户可以与之交互的控件。没有控件，启动视频播放的唯一方法是使用autoplay属性或通过Player API。
+                    controls: true,
+                    //建议浏览器是否应在<video>加载元素后立即开始下载视频数据。
+                    preload: "auto"
+                });
+            }
+        }
     }
 </script>

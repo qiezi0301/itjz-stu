@@ -1,0 +1,81 @@
+
+.hidden {
+  visibility: hidden!important
+}
+
+.hidden,.visible-lg,.visible-md,.visible-sm,.visible-xs,td.visible-lg,td.visible-md,td.visible-sm,td.visible-xs,th.visible-lg,th.visible-md,th.visible-sm,th.visible-xs,tr.visible-lg,tr.visible-md,tr.visible-sm,tr.visible-xs {
+  display: none!important
+}
+
+.hidden-xs {
+  display: block!important
+}
+
+.hidden-sm {
+  display: block!important
+}
+
+#fixedTools {
+  position: fixed;
+  right: 40px;
+  bottom: 60px;
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 36px;
+  text-align: center;
+  border-radius: 2px;
+  line-height: 1.25;
+  z-index: 1000
+}
+
+.elevator {
+  background: -webkit-gradient(linear,left top,left bottom,from(#365056),to(#273032));
+  background: linear-gradient(#365056,#273032);
+  border-color: #111415;
+  color: #fff;
+  -webkit-box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,.3),0 1px 2px rgba(0,0,0,.3);
+  box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,.3),0 1px 2px rgba(0,0,0,.3);
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  display: block;
+  font-size: 16px;
+  height: auto;
+  line-height: 24px;
+  margin: 15px;
+  padding: 20px;
+  text-align: center
+}
+
+@media screen and (min-width: 1000px) {
+  .elevator {
+    bottom:15px;
+    position: fixed;
+    right: 15px
+  }
+}
+
+.elevator .fa {
+  color: white;
+  display: block;
+  font-size: 21px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  width: 24px;
+  left: 20px;
+  margin-top: -12px;
+  position: absolute;
+  top: 50%
+}
+
+@media screen and (min-width: 1000px) {
+  .elevator .fa {
+    left:50%;
+    margin-left: -12px
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .elevator span {
+    display:none
+  }
+}

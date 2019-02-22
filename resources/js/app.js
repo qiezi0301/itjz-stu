@@ -12,6 +12,10 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router';
 import router from './routes';
 import App from './components/App';
+import Video from 'video.js';
+import 'video.js/dist/video-js.css';
+//
+Vue.prototype.$video = Video;
 
 Vue.use(VueRouter);
 Vue.component('app', App);
