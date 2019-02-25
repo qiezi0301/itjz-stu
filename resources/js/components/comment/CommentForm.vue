@@ -5,11 +5,11 @@
                 <img src="https://secure.gravatar.com/avatar/6e69e4dbdd164deb9e388622027f8bbb?s=256&d=monsterid&r=g" style="width: 50px; height: 50px;">
                 <form style="flex: 1 1 0%; margin-left: 24px;">
                     <div class="form-group">
-                        <textarea row="5" name="body" placeholder="发表评论..." required="required" class="form-control" data-vv-scope="__global__" aria-required="true" aria-invalid="true"></textarea>
+                        <textarea v-model="content" row="5" name="body" placeholder="发表评论..." required="required" class="form-control" data-vv-scope="__global__" aria-required="true" aria-invalid="true"></textarea>
                         <!---->
                     </div>
-                    <button type="submit" class="btn btn-success">发布评论</button>
-                    <button class="btn btn-link">取消</button>
+                    <button v-show="content" type="button" @click="submit" class="btn btn-success">发布评论</button>
+                    <button v-show="content" class="btn btn-link">取消</button>
                 </form>
             </div>
         </div>
@@ -18,6 +18,16 @@
 
 <script>
     export default {
-        name: "CommentForm"
+        name: "CommentForm",
+        data() {
+            return {
+                content:''
+            }
+        },
+        methods:{
+            submit: function () {
+                alert(this.content);
+            }
+        }
     }
 </script>

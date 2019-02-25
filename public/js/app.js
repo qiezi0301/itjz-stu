@@ -2472,7 +2472,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "CommentForm"
+  name: "CommentForm",
+  data: function data() {
+    return {
+      content: ''
+    };
+  },
+  methods: {
+    submit: function submit() {
+      alert(this.content);
+    }
+  }
 });
 
 /***/ }),
@@ -2714,12 +2724,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ReplyForm"
+  name: "ReplyForm",
+  data: function data() {
+    return {
+      completed: true
+    };
+  },
+  methods: {
+    toggleCompletion: function toggleCompletion(completed) {
+      this.completed = !completed;
+    }
+  }
 });
 
 /***/ }),
@@ -97508,64 +97524,100 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        {
-          staticClass: "container Replies__From comments",
-          attrs: { id: "Comments-Reply-Form" }
-        },
-        [
-          _c("div", { staticClass: "mt-2", staticStyle: { display: "flex" } }, [
-            _c("img", {
-              staticStyle: { width: "50px", height: "50px" },
-              attrs: {
-                src:
-                  "https://secure.gravatar.com/avatar/6e69e4dbdd164deb9e388622027f8bbb?s=256&d=monsterid&r=g"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "form",
-              { staticStyle: { flex: "1 1 0%", "margin-left": "24px" } },
-              [
-                _c("div", { staticClass: "form-group" }, [
-                  _c("textarea", {
-                    staticClass: "form-control",
-                    attrs: {
-                      row: "5",
-                      name: "body",
-                      placeholder: "发表评论...",
-                      required: "required",
-                      "data-vv-scope": "__global__",
-                      "aria-required": "true",
-                      "aria-invalid": "true"
+  return _c("div", { staticClass: "row" }, [
+    _c(
+      "div",
+      {
+        staticClass: "container Replies__From comments",
+        attrs: { id: "Comments-Reply-Form" }
+      },
+      [
+        _c("div", { staticClass: "mt-2", staticStyle: { display: "flex" } }, [
+          _c("img", {
+            staticStyle: { width: "50px", height: "50px" },
+            attrs: {
+              src:
+                "https://secure.gravatar.com/avatar/6e69e4dbdd164deb9e388622027f8bbb?s=256&d=monsterid&r=g"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "form",
+            { staticStyle: { flex: "1 1 0%", "margin-left": "24px" } },
+            [
+              _c("div", { staticClass: "form-group" }, [
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.content,
+                      expression: "content"
                     }
-                  })
-                ]),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "btn btn-success", attrs: { type: "submit" } },
-                  [_vm._v("发布评论")]
-                ),
-                _vm._v(" "),
-                _c("button", { staticClass: "btn btn-link" }, [_vm._v("取消")])
-              ]
-            )
-          ])
-        ]
-      )
-    ])
-  }
-]
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    row: "5",
+                    name: "body",
+                    placeholder: "发表评论...",
+                    required: "required",
+                    "data-vv-scope": "__global__",
+                    "aria-required": "true",
+                    "aria-invalid": "true"
+                  },
+                  domProps: { value: _vm.content },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.content = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.content,
+                      expression: "content"
+                    }
+                  ],
+                  staticClass: "btn btn-success",
+                  attrs: { type: "button" },
+                  on: { click: _vm.submit }
+                },
+                [_vm._v("发布评论")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.content,
+                      expression: "content"
+                    }
+                  ],
+                  staticClass: "btn btn-link"
+                },
+                [_vm._v("取消")]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -98149,41 +98201,47 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("a", { staticClass: "reply" }, [
-      _c("span", { staticClass: "votes-count" }, [_vm._v("0")]),
+    _c("div", { class: [_vm.completed ? "hidden" : "show"] }, [
+      _vm._m(0),
       _vm._v(" "),
       _c(
-        "svg",
+        "button",
+        { staticClass: "btn btn-success btn-sm", attrs: { type: "submit" } },
+        [_vm._v("回复评论")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
         {
-          staticClass: "icon vote",
-          attrs: {
-            t: "1499327478365",
-            viewBox: "0 0 1024 1024",
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            "p-id": "3526",
-            "xmlns:xlink": "http://www.w3.org/1999/xlink",
-            width: "10",
-            height: "10"
+          staticClass: "btn btn-sm btn-link",
+          on: {
+            click: function($event) {
+              return _vm.toggleCompletion(_vm.completed)
+            }
           }
         },
-        [
-          _c("path", {
-            attrs: {
-              d:
-                "M999.15776 774.8096c33.12128-31.84128 33.12128-83.49184 0-115.40992L572.0576 249.1392c-33.17248-31.8208-86.97856-31.8208-120.09984 0L24.87808 659.39968c-33.17248 31.8976-33.17248 83.56864 0 115.40992 33.14176 31.88224 86.92736 31.88224 120.11008 0l367.02208-352.57344 366.99136 352.57344c33.17248 31.88224 86.9632 31.88224 120.15616 0z",
-              "p-id": "3527"
-            }
-          })
-        ]
+        [_vm._v("取消")]
       )
     ]),
     _vm._v(" "),
-    _c("a", { staticClass: "reply" }, [_vm._v("回复")]),
-    _vm._v(" "),
-    _c("a", { staticClass: "save" }, [_vm._v("分享")])
+    _c("div", { class: [_vm.completed ? "show" : "hidden"] }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "reply",
+          on: {
+            click: function($event) {
+              return _vm.toggleCompletion(_vm.completed)
+            }
+          }
+        },
+        [_vm._v("回复")]
+      ),
+      _vm._v(" "),
+      _c("a", { staticClass: "save" }, [_vm._v("分享")])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -98191,29 +98249,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticStyle: { display: "none" } }, [
-      _c("form", [
-        _c("div", { staticClass: "form-group" }, [
-          _c("textarea", {
-            staticClass: "form-control",
-            attrs: {
-              name: "replybody",
-              autofocus: "autofocus",
-              "data-vv-scope": "__global__",
-              "aria-required": "true",
-              "aria-invalid": "false"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-success btn-sm", attrs: { type: "submit" } },
-          [_vm._v("回复评论")]
-        ),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-sm btn-link" }, [_vm._v("取消")])
-      ])
+    return _c("div", { staticClass: "form-group" }, [
+      _c("textarea", {
+        staticClass: "form-control",
+        attrs: {
+          name: "replybody",
+          autofocus: "autofocus",
+          "data-vv-scope": "__global__",
+          "aria-required": "true",
+          "aria-invalid": "false"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { staticClass: "reply" }, [
+      _c("span", { staticClass: "votes-count" }, [_vm._v("0")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "fa fa-heart", attrs: { "aria-hidden": "true" } })
     ])
   }
 ]
