@@ -15,6 +15,14 @@ class CreateLessonsTable extends Migration
     {
         Schema::create('lessons', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->string('title');
+            $table->text('body');
+            $table->string('video_Path')->nullable();
+            $table->integer('views_count')->default(0);
+            $table->integer('comments_count')->default(0);
+            $table->string('close_comment', 8)->default('F');
+            $table->string('is_hidden', 8)->default('F');
             $table->timestamps();
         });
     }

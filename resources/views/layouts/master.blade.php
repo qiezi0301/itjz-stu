@@ -23,12 +23,6 @@
 <script src="{{asset('/js/app.js')}}"></script>
 
 <script>
-    $(document).ready(function () {
-        $('pre code').each(function (i, block) {
-            hljs.highlightBlock(block);
-        });
-    });
-
     (function () {
         $('#backtop').on('click', function () {
             $('html, body').animate({

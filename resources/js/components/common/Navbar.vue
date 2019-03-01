@@ -25,8 +25,8 @@
                     <div class="AppHeader-userInfo">
                         <div class="AppHeader-profile">
                             <div>
-                                <a href="#" class="Button AppHeader-login Button--blue">登录</a>
-                                <a href="#" class="Button Button--primary Button--blue">注册</a>
+                                <router-link to="/login" class="Button AppHeader-login Button--blue">登录</router-link>
+                                <router-link to="/register" class="Button Button--primary Button--blue">注册</router-link>
                             </div>
                         </div>
                     </div>

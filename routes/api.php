@@ -8,3 +8,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/series', 'SerieController@index');
 Route::get('/series/{serie}', 'SerieController@show');
+
+Route::post('/register','Auth\RegisterController@register');

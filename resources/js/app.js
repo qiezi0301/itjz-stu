@@ -14,10 +14,15 @@ import router from './routes';
 import App from './components/App';
 import Video from 'video.js';
 import 'video.js/dist/video-js.css';
+
+import zh_CN from './locale/zh_CN';
+import VeeValidate, { Validator } from 'vee-validate';
 //
 Vue.prototype.$video = Video;
 
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
+Validator.localize('zh_CN', zh_CN);
 Vue.component('app', App);
 /**
  * The following block of code may be used to automatically register your

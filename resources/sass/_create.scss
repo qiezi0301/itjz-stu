@@ -1,0 +1,118 @@
+.media,.media-body {
+  overflow: hidden;
+  zoom:1}
+
+.participation-body {
+  background: #fff;
+  position: relative;
+  overflow: visible;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-right: -12px;
+}
+
+@media (max-width: 1200px) {
+  .participation-body {
+    width:60%
+  }
+}
+
+@media (max-width: 991px) {
+  .participation-body {
+    width:100%;
+    border: none
+  }
+}
+
+@media (max-width: 767px) {
+  .participation-body {
+    padding:10px;
+    font-size: 16px
+  }
+}
+
+.participation-body {
+  margin-right: 0
+}
+
+#participation-edit input[type=text],#participation-edit select,#participation-edit textarea {
+  color: #555
+}
+
+@media (max-width: 767px) {
+  #participation-edit .reply__avatar,#reply-form .reply__avatar {
+    display:none
+  }
+}
+
+#participation-edit form,#reply-form form {
+  padding-left: 0;
+  padding-right: 0
+}
+
+@media (max-width: 767px) {
+  #participation-edit form,#reply-form form {
+    width:100%
+  }
+}
+
+@media (max-width: 767px) {
+  #participation-edit .participation-body,#reply-form .participation-body {
+    padding:10px;
+    font-size: 16px
+  }
+}
+
+@media (min-width: 767px) {
+  #participation-edit .participation-body:before,#reply-form .participation-body:before {
+    content:none
+  }
+}
+
+#participation-edit:before,#reply-form:before {
+  content: none
+}
+
+#participation-edit input[type=text],#reply-form input[type=text] {
+  margin-bottom: 1em;
+  border-color: #ddd
+}
+
+.reply-form__submit {
+  margin-top: 20px;
+}
+.reply-form__submit:after {
+  margin-bottom: 20px;
+  clear: both;
+}
+
+@media (max-width: 767px) {
+  .reply-form__submit {
+    background:#eee;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 10px 0
+  }
+
+  .reply-form__submit .reply__help-block {
+    display: none
+  }
+}
+
+.reply-form__submit .btn-submit {
+  padding: 15px 30px
+}
+
+.input-naked--textarea {
+  border-radius: 4px;
+  width: 100%;
+  height: 400px;
+  padding: 30px;
+  border: 1px solid #e8e8e8;
+}
+
+button,html input[type=button],input[type=reset],input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
