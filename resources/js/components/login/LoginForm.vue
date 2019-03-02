@@ -1,13 +1,22 @@
 <template>
-    <form method="post" @submit.prevent="login">
-        <input type="hidden" name="_token" value="kSJVZLKYLJQ1JfqjYQIZwCohYOy0kYzJiqMdpI5d">
-        <div class="form-group">
+    <form method="post" @submit.prevent="login" novalidate="novalidate">
+        <div class="form-group" :class="{'has-error': errors.has('email')}">
             <label for="email" class="control-label">邮箱:</label>
-            <input v-model="email" id="email" name="email" type="email" class="form-control">
+            <input v-model="email"
+                   v-validate="'required|email'"
+                   data-vv-as="邮箱"
+                   required="required"
+                   id="email" name="email" type="email" class="form-control">
+            <span class="help-block">{{ errors.first('email') }}</span>
         </div>
-        <div class="form-group">
+        <div class="form-group" :class="{'has-error': errors.has('password')}">
             <label for="password" class="control-label">密码:</label>
-            <input v-model="password" id="password" name="password" type="password" class="form-control">
+            <input v-model="password"
+                   v-validate="'required|min:6'"
+                   data-vv-as="密码"
+                   required="required"
+                   id="password" name="password" type="password" class="form-control">
+            <span class="help-block">{{ errors.first('password') }}</span>
         </div>
         <div class="form-group buttons">
             <button type="submit" class="btn btn-primary btnBlack" style="font-weight: bold;">
@@ -30,19 +39,25 @@
         },
         methods: {
             login() {
-                let formData = {
-                    client_id: '2',
-                    client_secret: '3iQT5O3qV2SxhlbKLF0c2FuBGs6KMxjMue2pWDAX',
-                    grant_type: 'password',
-                    scope: '',
-                    username: this.email,
-                    password: this.password
-                };
-                axios.post('/oauth/token', formData).then(response => {
-                    //将access_token保存到localStorage中
-                    JWTToken.setToken(response.data.access_token);
-                    console.log(response.data);
+                //验证是否提交空表单
+                this.$validator.validateAll().then(result => {
+                    if (result) {
+                        let formData = {
+                            email: this.email,
+                            password: this.password
+                        };
+                        axios.post('/api/login', formData).then(response => {
+                            console.log(response.data);
+                            //将access_token保存到localStorage中
+                            JWTToken.setToken(response.data.token);
+                        }).catch(error => {
+                            console.log(error.response.data);
+                        });
+                    }else {
+                        alert('表单不能为空');
+                    }
                 });
+
             }
         }
     }

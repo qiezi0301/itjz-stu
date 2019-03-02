@@ -16,11 +16,6 @@ let routes = [
         components: require('./components/lessons/Lesson')
     },
     {
-        path: '/lessons',
-        name: 'lessons',
-        components: require('./components/lessons/Lessons')
-    },
-    {
         path: '/learn',
         name: 'learn',
         components: require('./components/pages/learn')

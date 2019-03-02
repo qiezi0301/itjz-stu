@@ -10,3 +10,4 @@ Route::get('/series', 'SerieController@index');
 Route::get('/series/{serie}', 'SerieController@show');
 
 Route::post('/register','Auth\RegisterController@register');
+Route::post('/login','Auth\LoginController@login');
