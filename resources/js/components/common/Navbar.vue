@@ -25,8 +25,9 @@
                     <div class="AppHeader-userInfo">
                         <div class="AppHeader-profile">
                             <div>
-                                <router-link to="/login" class="Button AppHeader-login Button--blue">登录</router-link>
-                                <router-link to="/register" class="Button Button--primary Button--blue">注册</router-link>
+                                <router-link v-if="!user.authenticated" to="/login" class="Button AppHeader-login Button--blue">登录</router-link>
+                                <router-link v-if="!user.authenticated" to="/register" class="Button Button--primary Button--blue">注册</router-link>
+                                <router-link v-if="user.authenticated" to="/profile" class="Button Button--primary Button--blue">个人中心</router-link>
                             </div>
                         </div>
                     </div>
@@ -36,7 +37,13 @@
 </template>
 
 <script>
+    import {mapState} from 'vuex'
     export default {
-        name: "Navbar"
+        name: "Navbar",
+        computed:{
+            ...mapState({
+                user: state=>state.AuthUser
+            })
+        }
     }
 </script>

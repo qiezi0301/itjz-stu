@@ -46,12 +46,8 @@
                             email: this.email,
                             password: this.password
                         };
-                        axios.post('/api/login', formData).then(response => {
-                            console.log(response.data);
-                            //将access_token保存到localStorage中
-                            JWTToken.setToken(response.data.token);
-                        }).catch(error => {
-                            console.log(error.response.data);
+                        this.$store.dispatch('loginRequest', formData).then(response =>{
+                            this.$router.push({name: 'profile'});
                         });
                     }else {
                         alert('表单不能为空');

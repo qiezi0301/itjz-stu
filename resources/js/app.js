@@ -11,12 +11,24 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
 import router from './routes';
+import jwtToken from './helpers/jwt';
+import store from './store/index';
 import App from './components/App';
 import Video from 'video.js';
 import 'video.js/dist/video-js.css';
 
 import zh_CN from './locale/zh_CN';
 import VeeValidate, { Validator } from 'vee-validate';
+
+axios.interceptors.request.use(function (config){
+    if (jwtToken.getToken()) {
+        //注意Bearer后面要留一个空格，坑，不然获取不了登录后的用户信息
+        config.headers['Authorization'] = 'Bearer ' + jwtToken.getToken();
+    }
+    return config;
+}, function (error) {
+    return Promise.reject(error);
+});
 //
 Vue.prototype.$video = Video;
 
@@ -45,5 +57,6 @@ Vue.component('app', App);
 
 const app = new Vue({
     el: '#application',
-    router
+    router,
+    store
 });
