@@ -7,7 +7,7 @@
             <div class="t-pico">
                 已经拥有帐户？</div>
             <div class="switch">
-                <a id="switch-link" href="/user/login?redirect_url=https://www.codecasts.com">登录</a>
+                <router-link to="/login">登录</router-link>
             </div>
         </div>
     </div>

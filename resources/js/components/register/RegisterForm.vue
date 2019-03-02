@@ -81,7 +81,7 @@
                     password: this.password
                 };
                 axios.post('/api/register', formData).then(response => {
-                    this.$router.push({name:'confirm'})
+                    this.$router.push({name: 'confirm', params:{email:this.email}})
                 });
             }
         }

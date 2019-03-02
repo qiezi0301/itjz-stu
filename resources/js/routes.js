@@ -43,7 +43,7 @@ let routes = [
     {
         path: '/login',
         name: 'login',
-        components: require('./components/user/Login')
+        components: require('./components/login/Login')
     },
     {
         path: '/chapters',
