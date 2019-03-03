@@ -79,7 +79,7 @@ router.beforeEach((to, from, next) => {
         }
     }
     if (to.meta.requiresGuest) {
-        if (Store.getters.get_authenticated || jwtToken.getToken()) {
+        if (Store.getters.get_authenticated && jwtToken.getToken()) {
             return next({'name': 'home'});
         } else {
             return next();
