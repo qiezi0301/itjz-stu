@@ -19,7 +19,7 @@ import 'video.js/dist/video-js.css';
 
 import zh_CN from './locale/zh_CN';
 import VeeValidate, { Validator } from 'vee-validate';
-
+//每次请求表头设置
 axios.interceptors.request.use(function (config){
     if (jwtToken.getToken()) {
         //注意Bearer后面要留一个空格，坑，不然获取不了登录后的用户信息

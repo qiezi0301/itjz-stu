@@ -13,8 +13,14 @@
     import TopMenu from './common/TopMenu';
     import Navbar from './common/Navbar';
     import Foot from './common/Footer'
+    import jwtToken from './../helpers/jwt';
     export default {
         name: "App",
+        created() {
+            if (jwtToken.getToken()) {
+                this.$store.dispatch('setAuthUser');
+            }
+        },
         components:{
             TopMenu,
             Navbar,

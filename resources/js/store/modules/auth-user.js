@@ -6,6 +6,17 @@ export default {
         name: null,
         email: null
     },
+    getters: {
+        get_authenticated : state =>{
+            return state.authenticated;
+        },
+        get_name : state =>{
+            return state.name;
+        },
+        get_email : state =>{
+            return state.email;
+        }
+    },
     mutations: {
         [types.SET_AUTH_USER](state, payload) {
             state.authenticated = true;
