@@ -28,6 +28,7 @@
                                 <router-link v-if="!user.authenticated" to="/login" class="Button AppHeader-login Button--blue">登录</router-link>
                                 <router-link v-if="!user.authenticated" to="/register" class="Button Button--primary Button--blue">注册</router-link>
                                 <router-link v-if="user.authenticated" to="/profile" class="Button Button--primary Button--blue">个人中心</router-link>
+                                <a v-if="user.authenticated" @click.prevent="logout" href="#" class="Button Button--primary Button--blue">退出</a>
                             </div>
                         </div>
                     </div>
@@ -39,11 +40,17 @@
 <script>
     import {mapState} from 'vuex'
     export default {
-        name: "Navbar",
         computed:{
             ...mapState({
                 user: state=>state.AuthUser
             })
+        },
+        methods:{
+            logout(){
+                this.$store.dispatch('logoutRequest').then(response =>{
+                    this.$router.push({name: 'home'});
+                });
+            }
         }
     }
 </script>

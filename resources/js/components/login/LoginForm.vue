@@ -28,7 +28,7 @@
 </template>
 
 <script>
-    import JWTToken from './../../helpers/jwt';
+    import jwtToken from './../../helpers/jwt';
     export default {
         name: "LoginForm",
         data() {
