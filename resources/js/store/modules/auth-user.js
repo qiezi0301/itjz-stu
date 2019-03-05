@@ -7,17 +7,6 @@ export default {
         name: null,
         email: null
     },
-    getters: {
-        get_authenticated: state => {
-            return state.authenticated;
-        },
-        get_name: state => {
-            return state.name;
-        },
-        get_email: state => {
-            return state.email;
-        }
-    },
     mutations: {
         [types.SET_AUTH_USER](state, payload) {
             state.authenticated = true;
@@ -36,14 +25,24 @@ export default {
                 commit({
                     type: types.SET_AUTH_USER,
                     user: response.data
-                },(response) =>{
-                    alert(response);
-                    console.error(response);
-                });
+                })
+            }).catch(error => {
+                //当access_token过期时通过refreshToken重新获取access_token
+                console.log('获取用户的 error=' + error.response);
+                dispatch('refreshToken')
             });
         },
         unsetAuthUser({commit}) {
             commit({type: types.UNSET_AUTH_USER});
+        },
+        refreshToken({commit, dispatch}) {
+            return axios.post('/api/token/refresh').then(response =>{
+                dispatch('loginSuccess',response.data);
+            }).catch(error => {
+                //重新获取token一旦失败就执行退出操作
+                console.log('重新获取用户失败,退出登录 error=' + error);
+                dispatch('logoutRequest');
+            })
         }
     }
 };

@@ -50,4 +50,9 @@ class LoginController extends Controller
         //$this->validateLogin(request());
         return $this->proxy->logout();
     }
+    public function refresh()
+    {
+        //$this->validateLogin(request());
+        return $this->proxy->refresh();
+    }
 }

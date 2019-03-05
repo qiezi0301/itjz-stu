@@ -14,11 +14,14 @@
     import Navbar from './common/Navbar';
     import Foot from './common/Footer'
     import jwtToken from './../helpers/jwt';
+    import Cookie from 'js-cookie';
     export default {
         name: "App",
         created() {
             if (jwtToken.getToken()) {
                 this.$store.dispatch('setAuthUser');
+            }else if (Cookie.get('auth_id')) {
+                this.$store.dispatch('refreshToken');
             }
         },
         components:{

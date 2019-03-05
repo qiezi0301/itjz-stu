@@ -37,6 +37,14 @@ class TokenProxy {
 
     }
 
+    public function refresh() {
+        //获取cookie中的refreshToken的值
+        $refreshTonken = request()->cookie('refreshToken');
+        return $this->proxy('refresh_token', [
+            'refresh_token' => $refreshTonken
+        ]);
+    }
+
     public function logout() {
         $user = auth()->guard('api')->user();
         if (is_null($user)) {
@@ -80,6 +88,7 @@ class TokenProxy {
 
         return response()->json([
             'token' => $token['access_token'],
+            'auth_id' => md5($token['refresh_token']),
             'expires_in' => $token['expires_in']
         ])->cookie('refreshToken', $token['refresh_token'],14400,null,null,false,true);
     }
