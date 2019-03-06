@@ -1,7 +1,7 @@
 <template>
     <div class="page">
         <navbar></navbar>
-        <top-menu></top-menu>
+        <!--<top-menu></top-menu>-->
         <notification></notification>
         <transition name="fade" mode="out-in">
             <router-view></router-view>

@@ -13,8 +13,8 @@
                     投资在学习上的时间和金钱总有一天会回赠给你自己 ！
                 </h4>
                 <div class="slogan-iphone">
-                    <a href="https://www.codecasts.com/user/register" class="btn-action btn-action-primary">
-                        马上加入 CODECASTS
+                    <a href="#series-all" class="btn-action btn-action-primary">
+                        马上学习
                     </a>
                 </div>
             </div>

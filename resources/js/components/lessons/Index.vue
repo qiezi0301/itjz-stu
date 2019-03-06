@@ -17,7 +17,7 @@
                 <div class="col-md-3" style="color: rgb(255, 255, 255); margin-top: 10px;"></div>
                 <div class="col-md-3" style="margin-top: 10px;">
                     <div id="Completion">
-                        <a href="https://www.codecasts.com/vip" class="lesson-watch-later-button btn btnBlack">订阅观看所有视频</a></div>
+                        <a href="/" class="lesson-watch-later-button btn btnBlack">返回首页</a></div>
                 </div>
             </div>
         </div>

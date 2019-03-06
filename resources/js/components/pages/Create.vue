@@ -4,7 +4,6 @@
             <div class="col-md-10 col-md-offset-1">
                 <article id="participation-edit" class="reply participation clear Article-List Article-Post">
                     <form action="/discuss/store" method="post">
-                        <input type="hidden" name="_token" value="kSJVZLKYLJQ1JfqjYQIZwCohYOy0kYzJiqMdpI5d">
                         <div class="form-group mt20">
                             <input placeholder="帖子标题" v-model="title" type="text" class="form-control title--create" style="height: 40px;">
                         </div>

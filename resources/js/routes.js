@@ -28,6 +28,12 @@ let routes = [
         meta:{}
     },
     {
+        path: '/createSeries',
+        name: 'createSeries',
+        components: require('./components/pages/CreateSeries'),
+        meta:{}
+    },
+    {
         path: '/create',
         name: 'create',
         components: require('./components/pages/Create'),
