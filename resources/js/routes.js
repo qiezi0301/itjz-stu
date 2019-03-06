@@ -59,8 +59,27 @@ let routes = [
     },
     {
         path: '/profile',
-        name: 'profile',
-        components: require('./components/user/Profile'),
+        components: require('./components/user/ProfileWrapper'),
+        children: [
+            {
+                path: '',
+                name: 'profile',
+                components: require('./components/user/Profile'),
+                meta: {requiresAuth: true}
+            },
+            {
+                path: '/edit-profile',
+                name: 'profile.editProfile',
+                components: require('./components/user/EditProfile'),
+                meta: {requiresAuth: true}
+            },
+            {
+                path: '/edit-password',
+                name: 'profile.editPassword',
+                components: require('./components/password/EditPassword'),
+                meta: {requiresAuth: true}
+            }
+        ],
         meta:{requiresAuth: true}
     }
 ];

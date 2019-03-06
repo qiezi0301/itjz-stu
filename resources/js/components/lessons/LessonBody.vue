@@ -13,10 +13,7 @@
                                     <strong>开发环境Windows篇</strong>
                                 </h1>
                                 <p class="lesson-title-meta">
-                                    <a href="/" >高可用服务架构 </a>
-                                    <span > >> </span>
-                                    <a href="/" >社区代码开源啦</a>
-                                    视频发布于 2018-08-16
+                                    <a href="/" >高可用服务架构 </a><span > >> </span><a href="/" >社区代码开源啦</a>视频发布于 2018-08-16
                                 </p>
                                 <div class="social-share"></div>
                             </article>
