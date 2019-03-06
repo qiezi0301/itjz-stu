@@ -2,6 +2,7 @@
     <div class="page">
         <navbar></navbar>
         <top-menu></top-menu>
+        <notification></notification>
         <transition name="fade" mode="out-in">
             <router-view></router-view>
         </transition>
@@ -13,6 +14,7 @@
     import TopMenu from './common/TopMenu';
     import Navbar from './common/Navbar';
     import Foot from './common/Footer'
+    import Notification from './common/Notification'
     import jwtToken from './../helpers/jwt';
     import Cookie from 'js-cookie';
     export default {
@@ -27,7 +29,8 @@
         components:{
             TopMenu,
             Navbar,
-            Foot
+            Foot,
+            Notification
         }
     }
 </script>
