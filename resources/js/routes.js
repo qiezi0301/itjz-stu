@@ -1,6 +1,5 @@
 import VueRouter from 'vue-router';
-import Store from './store/index';
-import jwtToken from './helpers/jwt';
+import beforeEach from './beforeEach'
 
 let routes = [
     {
@@ -31,13 +30,13 @@ let routes = [
         path: '/createSeries',
         name: 'createSeries',
         components: require('./components/pages/CreateSeries'),
-        meta:{}
+        meta:{requiresAdmin:true}
     },
     {
         path: '/create',
         name: 'create',
         components: require('./components/pages/Create'),
-        meta:{}
+        meta:{requiresAdmin:true}
     },
     {
         path: '/register',
@@ -95,22 +94,6 @@ const router = new VueRouter({
     routes
 });
 
-router.beforeEach((to, from, next) => {
-    if (to.meta.requiresAuth) {
-        if (jwtToken.getToken()) {
-            return next();
-        } else {
-            return next({'name': 'login'});
-        }
-    }
-    if (to.meta.requiresGuest) {
-        if (jwtToken.getToken()) {
-            return next({'name': 'home'});
-        } else {
-            return next();
-        }
-    }
-    next();
-});
+router.beforeEach(beforeEach);
 
 export default router

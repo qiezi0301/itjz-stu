@@ -69,7 +69,7 @@
                             if (error.response.status === 421) {
                                 this.bag.add({
                                     field: 'password',
-                                    msg: '邮箱和密码不相符'
+                                    msg: '邮箱或密码不相符或邮箱未认证'
                                 });
                             }
                             console.log(error.response);
@@ -78,7 +78,6 @@
                         alert('表单不能为空');
                     }
                 });
-
             }
         }
     }

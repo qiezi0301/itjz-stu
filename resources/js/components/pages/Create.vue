@@ -56,10 +56,6 @@
                 selected:'',
                 options: ['foo','bar','baz'],
                 filename2:'',
-                anchorAttrs: {
-                    target: '_blank',
-                    rel: 'noopener noreferrer nofollow'
-                },
                 toolbars: {
                     bold: true, // 粗体
                     italic: true, // 斜体
@@ -111,6 +107,9 @@
                 // returns false if progress is not computable
                 console.log(e+"上传中");
             }
+        },
+        updated() {
+            console.log('AuthUser.email' + this.$store.state.AuthUser.email);
         }
     }
 </script>

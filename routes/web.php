@@ -15,4 +15,3 @@ Route::any('{all}', function () {
     return view('layouts.master');
 })->where(['all' => '.*']);
 
-Route::post('/deploy','DeploymentController@deploy');

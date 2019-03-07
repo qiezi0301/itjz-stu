@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use App\Mailer\UserMailer;
 
 class RegisterController extends Controller
 {
@@ -74,10 +75,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'avatar' => '/images/avatars/default.png',
+            'confirmation_token' => str_random(40),
             'password' => Hash::make($data['password']),
         ]);
+        $this->sendVerifyEmailTo($user);
+        return $user;
+    }
+    private function sendVerifyEmailTo($user) {
+        (new userMailer())->welcome($user);
     }
 }
