@@ -4,8 +4,7 @@ export default {
     state: {
         authenticated: false,
         name: null,
-        email: null,
-        token: null
+        email: null
     },
     mutations: {
         [types.UPDATE_PROFILE_EMAIL](state, payload) {
@@ -26,10 +25,6 @@ export default {
         }
     },
     actions: {
-        setToken({ commit }, payload) {
-            const token = isEmpty(payload) ? null : payload.token || payload;
-            commit(TYPES.SET_TOKEN, token);
-        },
         setAuthUser({commit, dispatch}) {
             return axios.get('/api/user').then(response => {
                 commit({

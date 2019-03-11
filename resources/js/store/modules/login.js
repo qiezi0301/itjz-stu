@@ -1,4 +1,5 @@
 import jwtToken from './../../helpers/jwt';
+import localforage from "localforage";
 
 export default{
     actions : {
@@ -10,7 +11,8 @@ export default{
         loginSuccess({dispatch}, tokenResponse) {
             //将access_token保存到localStorage中
             jwtToken.setToken(tokenResponse.token);
-            jwtToken.setAuthId(tokenResponse.auth_id);
+
+            localforage.setItem('APP_USER_TOKEN', tokenResponse.token);
             dispatch('setAuthUser');
         },
         logoutRequest({dispatch}){

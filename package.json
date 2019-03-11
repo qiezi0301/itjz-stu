@@ -27,6 +27,7 @@
         "devicons": "^1.8.0",
         "element-ui": "^2.5.4",
         "js-cookie": "^2.2.0",
+        "localforage": "^1.7.3",
         "material-design-icons": "^3.0.1",
         "mavon-editor": "^2.6.17",
         "prismjs": "^1.15.0",
