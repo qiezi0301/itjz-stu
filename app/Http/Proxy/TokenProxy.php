@@ -48,7 +48,7 @@ class TokenProxy {
     public function logout() {
         $user = auth()->guard('api')->user();
         if (is_null($user)) {
-            app('cookie')->queue(app('cookie')->forget('refreshToken'));
+//            app('cookie')->queue(app('cookie')->forget('refreshToken'));
             return response()->json([
                 'message' => 'Logout',
             ], 204)->cookie('refreshToken', '', 0, null);
@@ -56,17 +56,19 @@ class TokenProxy {
 
         $accessToken = $user->token();
 
+//        $this->http->delete(env('APP_URL') . '/oauth/tokens', $accessToken->id);
+
         app('db')->table('oauth_refresh_tokens')
             ->where('access_token_id', $accessToken->id)
             ->update([
                 'revoked' => true,
             ]);
 
-        app('cookie')->queue(app('cookie')->forget('refreshToken'));
-        $accessToken->revoke();
+//        app('cookie')->queue(app('cookie')->forget('refreshToken'));
+        $accessToken->delete();
 
         return response()->json([
-            'message' => 'Logout',
+            'message' => '登出成功',
         ], 204)->cookie('refreshToken', '', 0, null);
     }
 
