@@ -5,7 +5,7 @@
                 <article id="participation-edit" class="reply participation clear Article-List Article-Post">
                     <form action="/discuss/store" method="post">
                         <div class="form-group mt20">
-                            <input placeholder="帖子标题" v-model="title" type="text" class="form-control title--create" style="height: 40px;">
+                            <input hidden placeholder="帖子标题" v-model="title" type="text" class="form-control title--create" style="height: 40px;">
                         </div>
                         <div class="form-group mt20" id="editor">
                             <mavon-editor v-model="content" :toolbars="toolbars" style="height: 100%"/>
