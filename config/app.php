@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Naux\Mail\SendCloudServiceProvider::class,
+        Iidestiny\LaravelFilesystemOss\OssStorageServiceProvider::class,
         /*
          * Application Service Providers...
          */

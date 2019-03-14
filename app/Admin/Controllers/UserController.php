@@ -82,7 +82,9 @@ class UserController extends Controller
         $grid->name('姓名');
         $grid->email('邮箱');
         $grid->settings('用户设置');
-        $grid->is_active('是否活动');
+        $grid->is_active('是否活动')->display(function ($is_active) {
+            return $is_active ? '是' : '否';
+        });;
         $grid->created_at('注册时间');
 
         return $grid;

@@ -132,9 +132,9 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'admin',
+        'disk' => 'oss',
 
-        // Image and file upload path under the disk above.
+        // 上面磁盘下的图像和文件上传路径
         'directory' => [
             'image' => 'images',
             'file'  => 'files',
@@ -315,6 +315,18 @@ return [
     |
     */
     'extensions' => [
+        'simplemde' => [
 
+            // 如果要禁用此扩展，请设置为false
+            'enable' => true,
+
+            // 如果要为调用方法设置别名
+            'alias' => 'markdown',
+
+            // 编辑器配置
+            'config' => [
+
+            ]
+        ]
     ],
 ];
