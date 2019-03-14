@@ -84,15 +84,19 @@ class SerieController extends Controller
             return 'header';
         });
         $grid->id('Id')->sortable();
-        $grid->title('标题')->modal('最新课程', function ($model) {
-            $lessons = $model->lessons()->take(10)->get()->map(function ($comment) {
-                return $comment->only(['id', 'title', 'created_at']);
-            });
-            return new Table(['ID', '标题', '发布时间'], $lessons->toArray());
-        })->display(function ($title) {
+        $grid->title('标题')->display(function ($title) {
             $count = $this->lessons()->count();
             return $title.'('.$count.')';
         });
+//        $grid->title('标题')->modal('最新课程', function ($model) {
+//            $lessons = $model->lessons()->take(10)->get()->map(function ($comment) {
+//                return $comment->only(['id', 'title', 'created_at']);
+//            });
+//            return new Table(['ID', '标题', '发布时间'], $lessons->toArray());
+//        })->display(function ($title) {
+//            $count = $this->lessons()->count();
+//            return $title.'('.$count.')';
+//        });
 //        $grid->lessons()->display(function ($lessons) {
 //
 //            $lessons = array_map(function ($lesson) {

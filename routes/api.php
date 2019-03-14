@@ -6,10 +6,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/admin', function (){
-    return view('welcome');
-})->name('admin');
-
 Route::post('/deploy','DeploymentController@deploy');
 
 Route::get('email/verify/{token}', 'EmailController@verify')->name('email.verify');
