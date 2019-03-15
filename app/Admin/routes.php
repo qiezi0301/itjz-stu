@@ -14,4 +14,5 @@ Route::group([
     $router->resource('users', 'UserController');
     $router->resource('series', 'SerieController');
     $router->resource('lessons', 'LessonController');
+    $router->resource('comments', 'CommentController');
 });
