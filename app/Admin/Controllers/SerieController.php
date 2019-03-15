@@ -106,7 +106,9 @@ class SerieController extends Controller
 //            return join('&nbsp;', $lessons);
 //        });;
         $grid->banner('Banner')->image(env('OSS_URL'),100,50);
-        $grid->description('描述')->editable('textarea');
+        $grid->description('描述')->display(function ($des){
+            return str_limit($des, 10);
+        });
         $grid->created_at('创建时间');
         $grid->updated_at('更新时间');
         $grid->filter(function ($filter) {
