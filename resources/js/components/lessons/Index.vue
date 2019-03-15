@@ -28,28 +28,16 @@
                     <div class="col-md-8 col-md-offset-2">
                         <table class="episode-outline table table-hover table-striped" style="background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.36) 0px 3px 6px;">
                             <tbody>
-                                <tr class="episode-wrap">
+                                <tr v-for="lesson in lessons" :key="lesson.id" class="episode-wrap">
                                     <td title="已观看" class="episode-index"><i class="material-icons">check_circle</i></td>
                                     <td class="episode-title">
-                                        <router-link to="/lessons/1">
+                                        <router-link :to="{ name:'lessons', params: {id:lesson.id}}">
                                             <i class="material-icons md-18">play_circle_outline</i>
-                                        <span class="episode-title__body">理论知识简介</span>
+                                            <span class="episode-title__body">{{ lesson.title }}</span>
                                         </router-link>
                                     </td>
                                     <td class="episode-length">
-                                        04:47 <span class="label label-primary label-create">2018-08-16 </span>
-                                    </td>
-                                </tr>
-                                <tr class="episode-wrap">
-                                    <td title="已观看" class="episode-index"><i class="material-icons">check_circle</i></td>
-                                    <td class="episode-title">
-                                        <router-link to="/lessons/1">
-                                            <i class="material-icons md-18">play_circle_outline</i>
-                                        <span class="episode-title__body">理论知识简介</span>
-                                        </router-link>
-                                    </td>
-                                    <td class="episode-length">
-                                        04:47 <span class="label label-primary label-create">2018-08-16 </span>
+                                        04:47 <span class="label label-primary label-create">{{ lesson.updated_at}} </span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -66,12 +54,15 @@
         name: "Serie",
         mounted() {
             axios.get('/api/series/' + this.$route.params.id).then(response => {
-                this.serie = response.data;
+                console.log(response);
+                this.serie = response.data.data.serie;
+                this.lessons = response.data.data.lessons;
             });
         },
         data() {
             return {
-                serie: {}
+                serie: {},
+                lessons:[]
             }
         }
     }
