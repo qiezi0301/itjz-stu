@@ -22,7 +22,7 @@ class SerieController extends Controller {
             return [
                 'id'          => $serie['id'],
                 'title'       => $serie['title'],
-                'description' => $serie['description'],
+                'description' => str_limit($serie['description'], 100),
                 'banner'      => env('OSS_URL') . $serie['banner']
             ];
         }, $series->toArray());
