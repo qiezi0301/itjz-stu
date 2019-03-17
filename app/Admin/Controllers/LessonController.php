@@ -86,10 +86,9 @@ class LessonController extends Controller
         $grid->serie()->title('系列');
         $grid->title('标题')->editable();
         $grid->video_Path('视频地址');
+        $grid->duration('时长')->editable();
         $grid->views_count('查看总数');
         $grid->comments_count('评论总数');
-
-
         $grid->close_comment('可否评论')->editable('select', ['T' => '是', 'F' => '否']);
         $grid->is_hidden('是否隐藏')->editable('select', ['T' => '是', 'F' => '否']);
         $grid->created_at('创建时间');
@@ -154,7 +153,6 @@ class LessonController extends Controller
         $form = new Form(new Lesson);
 
         $form->text('title', '标题');
-
 //        $form->select('serie_id', '系列')->options(function ($id) {
 //            $serie = Serie::find($id);
 //
@@ -168,6 +166,7 @@ class LessonController extends Controller
 
         $form->simplemde('body', '内容');
         $form->file('video_Path', '视频')->move('/videos');
+        $form->time('duration', '时长');
         $form->radio('close_comment', '是否评论')->options(['F' => '否', 'T'=> '是'])->default('F');
         $form->radio('is_hidden', '是否显示')->options(['F' => '否', 'T'=> '是'])->default('F');
         return $form;

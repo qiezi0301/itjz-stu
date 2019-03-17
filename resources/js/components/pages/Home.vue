@@ -41,11 +41,11 @@
                     </router-link>
                     <div class="toolbar flex flex-between align-center">
                         <p class="max60" style="margin-top: 10px;">
-                            <strong>时长:</strong> <a href="/learn/laravel" class="toolbar-tag ">146 分钟</a>
+                            <strong>时长:</strong> <a href="/learn/laravel" class="toolbar-tag ">{{ serie.durationCount }} 分钟</a>
                         </p>
                         <div class="flex align-center">
                             <time datetime="2017-06-27 06:42:48" class="m-r-1">
-                                <strong> 15 个视频 </strong>
+                                <strong> {{ serie.videoCount }} 个视频 </strong>
                             </time>
                         </div>
                     </div>

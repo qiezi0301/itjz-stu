@@ -37,7 +37,7 @@
                                         </router-link>
                                     </td>
                                     <td class="episode-length">
-                                        04:47 <span class="label label-primary label-create">{{ lesson.updated_at}} </span>
+                                        {{ lesson.duration }} <span class="label label-primary label-create">{{ lesson.updated_at}} </span>
                                     </td>
                                 </tr>
                             </tbody>
