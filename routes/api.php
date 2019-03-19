@@ -13,6 +13,9 @@ Route::get('email/verify/{token}', 'EmailController@verify')->name('email.verify
 Route::get('/series', 'SerieController@index');
 Route::get('/series/{serie}', 'SerieController@show');
 
+Route::get('/lessons/{lesson}', 'LessonController@show');
+Route::get('/lessonsBySerie/{lesson}', 'LessonController@lessonsBySerie');
+
 Route::post('/register','Auth\RegisterController@register');
 Route::post('/login','Auth\LoginController@login');
 Route::post('/logout','Auth\LoginController@logout');

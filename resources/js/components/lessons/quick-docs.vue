@@ -5,17 +5,9 @@
         </div>
         <!-- 垂直导航栏 -->
         <div class="menuList">
-            <div data-toggle="collapse" data-target="#demo" class="mb-3 mt-3"> <strong>1、社区代码开源啦</strong></div>
-            <ul class="menuList collapse" id="demo">
-                <li><router-link to="/">开发环境Windows篇</router-link></li>
-                <li><router-link to="/lessons/2">The Laravel Way</router-link></li>
-            </ul>
-
-            <div data-toggle="collapse" data-target="#demo1" class="mb-3 mt-3"> <strong>2、如何正确的发布提问贴</strong></div>
-            <ul class="menuList collapse" id="demo1">
-                <li><router-link to="/lessons/3">课程介绍</router-link></li>
-                <li><router-link to="/lessons/4">开发环境Mac篇</router-link></li>
-            </ul>
+            <div v-for="lesson in lessons" :key="lesson.id">
+                <router-link :to="{ name:'lessons', params: {id:lesson.id}}">{{ lesson.title }}</router-link>
+            </div>
         </div>
     </div>
 </template>
@@ -27,6 +19,17 @@ export default {
   name: 'quick-docs',
   components: {
     // DocsIcon
-  }
+  },
+    mounted() {
+        axios.get('/api/lessonsBySerie/' + this.$route.params.id).then(response => {
+            console.log(response);
+            this.lessons = response.data.data.lessons;
+        });
+    },
+    data() {
+        return {
+            lessons:[]
+        }
+    }
 }
 </script>
