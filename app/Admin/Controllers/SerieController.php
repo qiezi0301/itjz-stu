@@ -164,11 +164,11 @@ class SerieController extends Controller
 
         $form->text('title', '标题');
         $form->textarea('description', '描述');
-        $form->display('banner', '图片')->with(function ($banner) {
-            $disk = \Storage::disk('oss');
-            $url = $disk->signUrl($banner, env('TIMEOUT'));
-            return "<img src=".str_replace('http://' . env('OSS_BUCKET') . '.' . env('OSS_ENDPOINT') . '/', env('OSS_URL'), $url)." />";
-        });
+//        $form->display('banner', '图片')->with(function ($banner) {
+//            $disk = \Storage::disk('oss');
+//            $url = $disk->signUrl($banner, env('TIMEOUT'));
+//            return "<img src=".str_replace('http://' . env('OSS_BUCKET') . '.' . env('OSS_ENDPOINT') . '/', env('OSS_URL'), $url)." />";
+//        });
         $form->image('banner', '图片')->move('/images/series/'.date('Y-m-d', time()))->uniqueName();
         return $form;
     }
