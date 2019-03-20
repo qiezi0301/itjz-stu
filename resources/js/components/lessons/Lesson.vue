@@ -1,6 +1,6 @@
 <template>
     <div>
-        <video-play src="" :video_Path="lesson.video_Path" :next_id="1" :prev_id="2"></video-play>
+        <video-play src="" :video_Path="lesson.video_Path" :video_img="lesson.video_img" :next_id="1" :prev_id="2"></video-play>
         <lesson-body :lesson="lesson"></lesson-body>
     </div>
 

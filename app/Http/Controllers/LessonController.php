@@ -39,6 +39,7 @@ class LessonController extends Controller {
             'serie'         => $lesson->serie->title,
             'body'          => Markdown::convertToHtml($lesson['body']),
             'video_Path'    => env('OSS_URL') . $lesson['video_Path'],
+            'video_img'    => env('OSS_URL') . $lesson['video_Path'].'?x-oss-process=video/snapshot,t_10000,m_fast,w_800,f_png',
             'close_comment' => $lesson['close_comment'],
             'is_hidden'     => $lesson['is_hidden'],
             'updated_at'    => date('Y-m-d', strtotime($lesson['updated_at'])),
