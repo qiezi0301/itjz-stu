@@ -78,7 +78,7 @@ class UserController extends Controller
         $grid = new Grid(new User);
 
         $grid->id('Id');
-        $grid->avatar('头像')->image(config('/'),30,30);
+        $grid->avatar('头像')->image(env('OSS_URL'),30,30);
         $grid->name('姓名');
         $grid->email('邮箱');
         $grid->settings('用户设置');
@@ -101,7 +101,7 @@ class UserController extends Controller
         $show = new Show(User::findOrFail($id));
 
         $show->id('Id');
-        $show->avatar('头像')->image(config('/'),50,50);
+        $show->avatar('头像111')->image(env('OSS_URL'),30,30);
         $show->name('姓名');
         $show->email('邮箱');
         $show->settings('用户设置');

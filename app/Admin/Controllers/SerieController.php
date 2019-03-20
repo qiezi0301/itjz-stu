@@ -110,11 +110,7 @@ class SerieController extends Controller
 //        $url = $disk->signUrl($lesson['video_Path'], $timeout);
 
 
-        $grid->banner('Banner')->display(function ($banner) {
-            $disk = \Storage::disk('oss');
-            $url = $disk->signUrl($banner, env('TIMEOUT'));
-            return str_replace('http://' . env('OSS_BUCKET') . '.' . env('OSS_ENDPOINT') . '/', '', $url);
-        })->image(env('OSS_URL'),70,50);
+        $grid->banner('Banner')->image(env('OSS_URL'),70,50);
         $grid->description('描述')->display(function ($des){
             return str_limit($des, 10);
         });
@@ -142,11 +138,7 @@ class SerieController extends Controller
         $show->id('Id');
         $show->title('标题');
         $show->description('描述');
-        $show->banner('Banner')->as(function ($banner) {
-            $disk = \Storage::disk('oss');
-            $url = $disk->signUrl($banner, env('TIMEOUT'));
-            return str_replace('http://' . env('OSS_BUCKET') . '.' . env('OSS_ENDPOINT') . '/', '', $url);
-        })->image(env('OSS_URL'),370,150);
+        $show->banner('Banner')->image(env('OSS_URL'),370,150);
         $show->created_at('创建时间');
         $show->updated_at('更新时间');
 

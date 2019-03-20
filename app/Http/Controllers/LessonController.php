@@ -33,14 +33,12 @@ class LessonController extends Controller {
     }
 
     private function lessonTransform(Lesson $lesson) {
-        $disk = \Storage::disk('oss');
-        $url = $disk->signUrl($lesson['video_Path'], env('TIMEOUT'));
         return [
             'title'         => $lesson['title'],
             'serie_id'      => $lesson['serie_id'],
             'serie'         => $lesson->serie->title,
             'body'          => Markdown::convertToHtml($lesson['body']),
-            'video_Path'    => str_replace('http://'.env('OSS_BUCKET'). '.' . env('OSS_ENDPOINT'). '/',env('OSS_URL'),$url),
+            'video_Path'    => env('OSS_URL') . $lesson['video_Path'],
             'close_comment' => $lesson['close_comment'],
             'is_hidden'     => $lesson['is_hidden'],
             'updated_at'    => date('Y-m-d', strtotime($lesson['updated_at'])),
