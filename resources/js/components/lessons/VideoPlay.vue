@@ -66,6 +66,8 @@
                     //建议浏览器是否应在<video>加载元素后立即开始下载视频数据。
                     preload: "auto"
                 });
+                //禁止视频区域右键
+                $('#myVideo').bind('contextmenu',function() { return false; });
             }
         }
     }
