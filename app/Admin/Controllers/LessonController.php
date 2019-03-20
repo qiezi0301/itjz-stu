@@ -165,7 +165,7 @@ class LessonController extends Controller
         $form->select('user_id', '作者')->options($userModel::pluck('username', 'id'));
 
         $form->simplemde('body', '内容');
-        $form->file('video_Path', '视频')->move('/videos');
+        $form->file('video_Path', '视频')->move('/videos/'.date('Y-m-d', time()));
         $form->time('duration', '时长');
         $form->radio('close_comment', '是否评论')->options(['F' => '否', 'T'=> '是'])->default('F');
         $form->radio('is_hidden', '是否显示')->options(['F' => '否', 'T'=> '是'])->default('F');

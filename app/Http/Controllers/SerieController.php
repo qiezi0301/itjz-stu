@@ -22,11 +22,13 @@ class SerieController extends Controller {
     private function transform($series) {
         return array_map(function ($serie) {
             $lessons = Lesson::where('serie_id', $serie['id'])->get();
+            $disk = \Storage::disk('oss');
+            $url = $disk->signUrl($serie['banner'], env('TIMEOUT'));
             return [
                 'id'            => $serie['id'],
                 'title'         => $serie['title'],
                 'description'   => str_limit($serie['description'], 100),
-                'banner'        => env('OSS_URL') . $serie['banner'],
+                'banner'        => str_replace('http://'.env('OSS_BUCKET'). '.' . env('OSS_ENDPOINT'). '/',env('OSS_URL'),$url),
                 //计算分钟
                 'durationCount' => $lessons->pluck('duration')->map(function ($duration) {
                     $arr = explode(':', $duration);
