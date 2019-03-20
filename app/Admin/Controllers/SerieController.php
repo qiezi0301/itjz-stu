@@ -169,7 +169,8 @@ class SerieController extends Controller
 //            $url = $disk->signUrl($banner, env('TIMEOUT'));
 //            return "<img src=".str_replace('http://' . env('OSS_BUCKET') . '.' . env('OSS_ENDPOINT') . '/', env('OSS_URL'), $url)." />";
 //        });
-        $form->image('banner', '图片')->move('/images/series/'.date('Y-m-d', time()))->uniqueName();
+//        $form->image('banner', '图片')->move('/images/series/'.date('Y-m-d', time()))->uniqueName();
+        $form->image('banner', '图片')->move('/images/series');
         return $form;
     }
 }
