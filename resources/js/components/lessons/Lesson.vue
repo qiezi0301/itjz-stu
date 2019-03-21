@@ -19,14 +19,13 @@
         },
         mounted() {
             axios.get('/api/lessons/' + this.$route.params.id).then(response => {
-                console.log(response);
                 this.lesson = response.data.data.lesson;
+                console.log(this.lesson);
             });
         },
         data() {
             return {
-                lesson: {},
-                // lessons:[]
+                lesson: {}
             }
         }
     }

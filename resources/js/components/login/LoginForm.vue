@@ -63,7 +63,8 @@
                             password: this.password
                         };
                         this.$store.dispatch('loginRequest', formData).then(response =>{
-                            this.$router.push({name: 'profile'});
+                            // this.$router.push({name: 'profile'});
+                            this.$router.go(-1);
                         }).catch(error =>{
                             //处理登录密码不正确提示
                             if (error.response.status === 421) {

@@ -20,6 +20,9 @@
 <script>
     export default {
         name: "ProfileWrapper",
-
+        mounted(){
+            //获取当前页面路由
+            console.log(this.$store.state.route);
+        }
     }
 </script>

@@ -22,3 +22,8 @@ Route::post('/logout','Auth\LoginController@logout');
 Route::post('/token/refresh','Auth\LoginController@refresh');
 Route::post('/user/profile/update','ProfileController@update')->middleware('auth:api');
 Route::post('/user/password/update','PasswordController@update')->middleware('auth:api');
+
+//评论的路由
+Route::get('lesson/{id}/comments', 'CommentController@lesson');
+
+Route::post('comment', 'CommentController@store');

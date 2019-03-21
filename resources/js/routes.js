@@ -18,7 +18,7 @@ let routes = [
         path: '/lessons/:id',
         name: 'lessons',
         components: require('./components/lessons/Lesson'),
-        meta:{}
+        meta:{requiresAuth: true}
     },
     {
         path: '/learn',
@@ -30,13 +30,13 @@ let routes = [
         path: '/createSeries',
         name: 'createSeries',
         components: require('./components/pages/CreateSeries'),
-        meta:{requiresAdmin:true}
+        meta:{}
     },
     {
         path: '/create',
         name: 'create',
         components: require('./components/pages/Create'),
-        meta:{requiresAdmin:true}
+        meta:{}
     },
     {
         path: '/register',

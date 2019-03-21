@@ -4,7 +4,8 @@ export default {
     state: {
         authenticated: false,
         name: null,
-        email: null
+        email: null,
+        avatar: null
     },
     mutations: {
         [types.UPDATE_PROFILE_EMAIL](state, payload) {
@@ -17,6 +18,7 @@ export default {
             state.authenticated = true;
             state.name = payload.user.name;
             state.email = payload.user.email;
+            state.avatar = payload.user.avatar;
         },
         [types.UNSET_AUTH_USER](state) {
             state.authenticated = false;
