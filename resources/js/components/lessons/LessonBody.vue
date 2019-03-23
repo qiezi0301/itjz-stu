@@ -7,7 +7,7 @@
                         <div class="thread-content box-body text-gray-40 text-16">
                             <article class="article my-4 pb-2 border-bottom">
                                 <h1 class="lesson-title">
-                                    <strong>{{ lesson.title }}</strong>{{ lesson.serie_id }}
+                                    <strong>{{ lesson.title }}</strong>
                                 </h1>
                                 <p class="lesson-title-meta">
                                     <router-link :to="{ name:'series', params: {id:lesson.serie_id}}" >{{ lesson.serie }} </router-link><span > >> </span>{{ lesson.title }}     视频发布于 {{ lesson.updated_at }}
