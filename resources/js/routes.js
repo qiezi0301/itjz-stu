@@ -57,12 +57,6 @@ let routes = [
         meta:{requiresGuest: true}
     },
     {
-        path: '/chapters',
-        name: 'chapters',
-        components: require('./components/pages/Chapters'),
-        meta:{}
-    },
-    {
         path: '/profile',
         components: require('./components/user/ProfileWrapper'),
         children: [
