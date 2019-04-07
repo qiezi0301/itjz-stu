@@ -4,7 +4,7 @@
             <div class="footer-bottom">
                 <p class="pull-left not-mobile not-pad">
                 Developed By
-                    <a href="https://jellybool.com" target="_blank" rel="noreferrer noopener">Qiezi</a>,Powered
+                    <a href="http://stu.itjz.cn" target="_blank" rel="noreferrer noopener">Qiezi</a>,Powered
                 By
                     <a target="_blank" rel="noreferrer noopener" href="http://laravel.com">Laravel</a>
                 </p>

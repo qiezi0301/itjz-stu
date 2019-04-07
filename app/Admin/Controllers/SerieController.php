@@ -153,7 +153,8 @@ class SerieController extends Controller
     protected function form()
     {
         $form = new Form(new Serie);
-
+        // 显示记录id
+        $form->display('id', 'ID');
         $form->text('title', '标题');
         $form->textarea('description', '描述');
 //        $form->display('banner', '图片')->with(function ($banner) {
