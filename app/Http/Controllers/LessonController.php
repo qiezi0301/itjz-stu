@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Lesson;
 use Illuminate\Http\Request;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Parsedown;
 
 class LessonController extends Controller {
     /**
@@ -37,7 +38,7 @@ class LessonController extends Controller {
             'title'         => $lesson['title'],
             'serie_id'      => $lesson['serie_id'],
             'serie'         => $lesson->serie->title,
-            'body'          => Markdown::convertToHtml($lesson['body']),
+            'body'          => Parsedown::instance()->text($lesson['body']),
             'video_Path'    => env('OSS_URL') . $lesson['video_Path'],
             'video_img'    => env('OSS_URL') . $lesson['video_Path'].'?x-oss-process=video/snapshot,t_10000,m_fast,w_800,f_png',
             'close_comment' => $lesson['close_comment'],

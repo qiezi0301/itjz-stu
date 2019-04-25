@@ -13,6 +13,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Parsedown;
 
 class LessonController extends Controller
 {
@@ -128,7 +129,7 @@ class LessonController extends Controller
             }
         });
         $show->body('内容')->unescape()->as(function ($body) {
-            return Markdown::convertToHtml($body);
+            return Parsedown::instance()->text($body);
         });
         $show->video_Path('视频地址');
         $show->views_count('查看总数');

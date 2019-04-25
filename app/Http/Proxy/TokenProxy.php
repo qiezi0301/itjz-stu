@@ -27,13 +27,13 @@ class TokenProxy {
             return $this->proxy('password', [
                 'username' => $email,
                 'password' => $password,
-                'scope' => ''
+                'scope'    => '',
             ]);
         }
         return response()->json([
-            'status' => false,
-            'message' => '您的邮箱尚未验证'
-        ],421);
+            'status'  => false,
+            'message' => '您的邮箱尚未验证',
+        ], 421);
 
     }
 
@@ -41,7 +41,7 @@ class TokenProxy {
         //获取cookie中的refreshToken的值
         $refreshTonken = request()->cookie('refreshToken');
         return $this->proxy('refresh_token', [
-            'refresh_token' => $refreshTonken
+            'refresh_token' => $refreshTonken,
         ]);
     }
 
@@ -84,13 +84,13 @@ class TokenProxy {
             'grant_type'    => $grantType,
         ]);
         $response = $this->http->post(env('APP_URL') . '/oauth/token', [
-            'form_params' => $data
+            'form_params' => $data,
         ]);
-        $token = json_decode((string) $response->getBody(), true);
+        $token = json_decode((string)$response->getBody(), true);
 
         return response()->json([
-            'token' => $token['access_token'],
-            'expires_in' => $token['expires_in']
-        ])->cookie('refreshToken', $token['refresh_token'],14400,null,null,false,true);
+            'token'      => $token['access_token'],
+            'expires_in' => $token['expires_in'],
+        ])->cookie('refreshToken', $token['refresh_token'], 14400, null, null, false, true);
     }
 }
